@@ -7,19 +7,21 @@ public class Product {
     private int id;
     private String name;
     private String category;
-    private BigDecimal price;
+    private int price;
     private int stockQuantity;
     private String description;
+    private String image;
 
     public Product(){}
 
-    public Product(int id, String name, String category, BigDecimal price, int stockQuantity,  String description){
+    public Product(int id, String name, String category, int price, int stockQuantity, String description, String image) {
         this.id = id;
         this.name = name;
         this.category = category;
         this.price = price;
         this.stockQuantity = stockQuantity;
         this.description = description;
+        this.image = image;
     }
 
 
@@ -47,10 +49,10 @@ public class Product {
     }
 
 
-    public BigDecimal getPrice(){
+    public int getPrice(){
         return price;
     }
-    public void setPrice(BigDecimal price){
+    public void setPrice(int price){
         this.price = price;
     }
 
@@ -71,4 +73,10 @@ public class Product {
     }
 
 
+    public  String getImage(){
+        return image;
+    }
+    public void setImage(String image){
+        this.image = image;
+    }
 }
