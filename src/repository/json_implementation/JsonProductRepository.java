@@ -26,18 +26,11 @@ public class JsonProductRepository implements IProductRepository {
 
     @Override
     public List<Product> findAll() {
-
-        try (Reader reader = new FileReader(filePath)) {
-
-            Type listType = new TypeToken<ArrayList<Product>>() {}.getType();
-            List<Product> products = gson.fromJson(reader, listType);
-
-            if (products == null)
-                return new ArrayList<>();
-
-            return products;
-
-        } catch (IOException e) {
+        try (FileReader reader = new FileReader("data/json_files/Products.json")) {
+            Gson gson = new Gson();
+            return gson.fromJson(reader, new TypeToken<List<Product>>(){}.getType());
+        } catch (Exception e) {
+            e.printStackTrace();
             return new ArrayList<>();
         }
     }

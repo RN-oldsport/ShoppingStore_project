@@ -4,6 +4,7 @@ import model.Product;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductManagementPanel extends JPanel {
@@ -11,10 +12,16 @@ public class ProductManagementPanel extends JPanel {
     private JPanel productsContainerPanel;
     private JScrollPane scrollPane;
 
+    private List<ProductCardPanel> cards;
+
+    JButton btnNewProduct;
+
 
     public ProductManagementPanel(MainFrame mainFrame) {
 
         setLayout(new BorderLayout());
+
+        cards = new ArrayList<>();
 
         // Container panel for product cards
         productsContainerPanel = new JPanel();
@@ -25,7 +32,10 @@ public class ProductManagementPanel extends JPanel {
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
+        btnNewProduct = new JButton("New Product");
+
         add(scrollPane, BorderLayout.CENTER);
+        add(btnNewProduct, BorderLayout.SOUTH);
     }
 
 
@@ -37,6 +47,8 @@ public class ProductManagementPanel extends JPanel {
         for (Product p : products) {
             ProductCardPanel card = new ProductCardPanel(p);
 
+            cards.add(card);
+
             productsContainerPanel.add(card);
             productsContainerPanel.add(Box.createRigidArea(new Dimension(0, 10))); // فاصله بین کارت‌ها
         }
@@ -44,4 +56,13 @@ public class ProductManagementPanel extends JPanel {
         productsContainerPanel.revalidate();
         productsContainerPanel.repaint();
     }
+
+    public List<ProductCardPanel> getCards() {
+        return cards;
+    }
+
+    public JButton getBtnNewProduct() {
+        return btnNewProduct;
+    }
+
 }

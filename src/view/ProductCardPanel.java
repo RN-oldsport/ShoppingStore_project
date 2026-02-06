@@ -17,6 +17,7 @@ public class ProductCardPanel extends JPanel {
     private JLabel lblDescription;
 
     private JButton btnModify;
+    private JButton btnDelete;
 
     public ProductCardPanel(Product product) {
         this.product = product;
@@ -52,21 +53,20 @@ public class ProductCardPanel extends JPanel {
         lblCategory = new JLabel("Category: " + product.getCategory());
         lblDescription = new JLabel("Description: " + product.getDescription());
 
-        lblTitle.setForeground(Color.BLUE);
-        lblPrice.setForeground(Color.BLUE);
-        lblStock.setForeground(Color.BLUE);
-        lblCategory.setForeground(Color.BLUE);
-        lblDescription.setForeground(Color.BLUE);
+//        lblTitle.setForeground(Color.BLUE);
+//        lblPrice.setForeground(Color.BLUE);
+//        lblStock.setForeground(Color.BLUE);
+//        lblCategory.setForeground(Color.BLUE);
+//        lblDescription.setForeground(Color.BLUE);
 
         btnModify = new JButton("Modify");
+        btnDelete = new JButton("Delete");
     }
 
     private void buildUI() {
 
-        // Left side image
         add(lblImage, BorderLayout.WEST);
 
-        // Center info panel
         JPanel infoPanel = new JPanel();
         infoPanel.setLayout(new GridLayout(5, 1));
         infoPanel.setBackground(new Color(240, 240, 240));
@@ -81,8 +81,11 @@ public class ProductCardPanel extends JPanel {
 
         // Bottom button panel
         JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new GridLayout(1, 2));
         buttonPanel.setBackground(new Color(240, 240, 240));
+
         buttonPanel.add(btnModify);
+        buttonPanel.add(btnDelete);
 
         add(buttonPanel, BorderLayout.SOUTH);
     }
@@ -90,6 +93,10 @@ public class ProductCardPanel extends JPanel {
 
     public JButton getBtnModify() {
         return btnModify;
+    }
+
+    public  JButton getBtnDelete() {
+        return btnDelete;
     }
 
     public Product getProduct() {
