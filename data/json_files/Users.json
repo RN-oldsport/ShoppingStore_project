@@ -1,0 +1,22 @@
+[
+  {
+    "cart": {
+      "items": []
+    },
+    "balance": 0.0,
+    "id": 1,
+    "username": "Pop",
+    "password": "0cca79f951e82323381375324442d5fe77e5bcb5899b87cb2f0bebff1bc0244a",
+    "role": "CUSTOMER"
+  },
+  {
+    "cart": {
+      "items": []
+    },
+    "balance": 0.0,
+    "id": 2,
+    "username": "re",
+    "password": "c2f6f9eabe8b2eba069a84f4e98aa2446c8ec7f36edae4bef413c688a327231c",
+    "role": "CUSTOMER"
+  }
+]

@@ -23,25 +23,15 @@ public class OrderServices {
         this.customerService = customerService;
     }
 
-    // ==========================
-    // Get All Orders
-    // ==========================
     public List<Order> getAllOrders() {
         return orderRepo.findAll();
     }
 
-    // ==========================
-    // Get Orders of One Customer
-    // ==========================
     public List<Order> getCustomerOrders(int customerId) {
         return orderRepo.findByCustomerId(customerId);
     }
 
-    // ==========================
-    // Generate New Order ID
-    // ==========================
     private int generateNewOrderId() {
-
         List<Order> orders = orderRepo.findAll();
 
         int maxId = 0;
@@ -53,13 +43,15 @@ public class OrderServices {
         return maxId + 1;
     }
 
-    // ==========================
-    // Place Order (Purchase)
-    // ==========================
-    public OperationResult<Order> placeOrder(Customer customer) {
+    public OperationResult<Order> placeOrder(int customerId) {
+
+        // ==========================
+        // Load Fresh Customer
+        // ==========================
+        Customer customer = customerService.getCustomerById(customerId);
 
         if (customer == null)
-            return new OperationResult<>(null, false, "Customer is null!");
+            return new OperationResult<>(null, false, "Customer not found!");
 
         Cart cart = customer.getCart();
 
@@ -72,17 +64,11 @@ public class OrderServices {
         int totalPrice = 0;
 
         // ==========================
-        // Validate Cart Items
+        // Validate Items + Calculate Total
         // ==========================
         for (CartItem cartItem : cartItems) {
 
-            int productId;
-
-            try {
-                productId = cartItem.getProductId();
-            } catch (NumberFormatException e) {
-                return new OperationResult<>(null, false, "Invalid productId in cart!");
-            }
+            int productId = cartItem.getProductId();
 
             if (cartItem.getQuantity() <= 0)
                 return new OperationResult<>(null, false, "Invalid quantity for product id: " + productId);
@@ -92,9 +78,6 @@ public class OrderServices {
             if (product == null)
                 return new OperationResult<>(null, false, "Product not found (ID: " + productId + ")");
 
-            // ==========================
-            // Stock Check (Business Logic)
-            // ==========================
             if (product.getStockQuantity() < cartItem.getQuantity()) {
                 return new OperationResult<>(
                         null,
@@ -107,19 +90,19 @@ public class OrderServices {
             int itemTotal = product.getPrice() * cartItem.getQuantity();
             totalPrice += itemTotal;
 
-            // Save priceAtPurchase
             OrderItem orderItem = new OrderItem(productId, cartItem.getQuantity(), product.getPrice());
             orderItems.add(orderItem);
         }
 
         // ==========================
-        // Balance Check (Business Logic)
+        // Check Balance
         // ==========================
         if (customer.getBalance() < totalPrice) {
             return new OperationResult<>(
                     null,
                     false,
-                    "Not enough balance! Total Price: " + totalPrice + " | Your Balance: " + customer.getBalance()
+                    "Not enough balance! Total Price: " + totalPrice +
+                            " | Your Balance: " + customer.getBalance()
             );
         }
 
@@ -132,16 +115,23 @@ public class OrderServices {
 
             int newStock = product.getStockQuantity() - item.getQuantity();
 
-            productServices.modifyProductStockQuantity(product.getId(), newStock);
+            OperationResult<Void> stockResult =
+                    productServices.modifyProductStockQuantity(product.getId(), newStock);
+
+            if (!stockResult.isSuccess()) {
+                return new OperationResult<>(null, false,
+                        "Failed to update stock for product: " + product.getName());
+            }
         }
 
         // ==========================
-        // Reduce Customer Balance
+        // Reduce Customer Balance (only here)
         // ==========================
-        customerService.decreaseBalance(customer.getId(), totalPrice);
+        double newBalance = customer.getBalance() - totalPrice;
+        customer.setBalance(newBalance);
 
         // ==========================
-        // Create Order Object
+        // Create Order
         // ==========================
         int orderId = generateNewOrderId();
 
@@ -154,7 +144,7 @@ public class OrderServices {
         );
 
         // ==========================
-        // Save Order in Orders.json
+        // Save Order
         // ==========================
         List<Order> orders = orderRepo.findAll();
         orders.add(order);
@@ -165,9 +155,17 @@ public class OrderServices {
         // ==========================
         customer.getCart().getItems().clear();
 
-        // Save customer changes in Users.json
-        customerService.updateCustomer(customer);
+        // ==========================
+        // Save Customer Changes (balance + cart)
+        // ==========================
+        OperationResult<Void> updateResult = customerService.updateCustomer(customer);
 
-        return new OperationResult<>(order, true, "Order placed successfully! Order ID: " + orderId);
+        if (!updateResult.isSuccess()) {
+            return new OperationResult<>(null, false,
+                    "Order saved but customer update failed!");
+        }
+
+        return new OperationResult<>(order, true,
+                "Order placed successfully! Order ID: " + orderId);
     }
 }

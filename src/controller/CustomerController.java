@@ -1,6 +1,8 @@
 package controller;
 
+import common.OperationResult;
 import model.Customer;
+import model.Order;
 import model.Product;
 import services.CartServices;
 import services.CustomerServices;
@@ -93,7 +95,7 @@ public class CustomerController {
             }
 
             // ثبت سفارش
-            var orderResult = orderService.placeOrder(customer);
+            OperationResult<Order> orderResult = orderService.placeOrder(customer.getId());
             if (orderResult.isSuccess()) {
                 JOptionPane.showMessageDialog(mainFrame, "Purchase successful! Order ID: " + orderResult.getData().getId());
                 cartService.clearCart(customer); // خالی کردن سبد خرید بعد از خرید موفق
