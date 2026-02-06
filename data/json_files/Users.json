@@ -1,22 +1,18 @@
 [
   {
-    "cart": {
-      "items": []
-    },
-    "balance": 0.0,
     "id": 1,
-    "username": "Pop",
-    "password": "0cca79f951e82323381375324442d5fe77e5bcb5899b87cb2f0bebff1bc0244a",
-    "role": "CUSTOMER"
+    "username": "Admin",
+    "password": "c6f3ac57944a531490cd39902d0f777715fd005efac9a30622d5f5205e7f6894",
+    "role": "ADMIN"
   },
   {
     "cart": {
       "items": []
     },
-    "balance": 0.0,
+    "balance": 10000.0,
     "id": 2,
-    "username": "re",
-    "password": "c2f6f9eabe8b2eba069a84f4e98aa2446c8ec7f36edae4bef413c688a327231c",
+    "username": "Pop",
+    "password": "c6f3ac57944a531490cd39902d0f777715fd005efac9a30622d5f5205e7f6894",
     "role": "CUSTOMER"
   }
 ]

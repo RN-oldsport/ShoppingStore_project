@@ -27,7 +27,7 @@ public class Main {
         CustomerServices customerService = new CustomerServices(userRepo);
         ProductServices productService = new ProductServices(productRepo);
         CartServices cartService = new CartServices(productService);
-        AuthenticationService authService = new AuthenticationService(userRepo, customerService);
+        AuthenticationService authService = new AuthenticationService(userRepo);
 
         OrderServices orderService = new OrderServices(
                 null, // بعداً IOrderRepository اضافه می‌کنیم، فعلاً می‌تونی null بذاری یا پیاده کن

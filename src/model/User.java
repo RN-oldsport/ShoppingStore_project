@@ -14,7 +14,7 @@ public abstract class User {
 
     public User(String username, String password, Role role) {
         this.username = username;
-        this.password = PasswordHasher.hasher(password);
+        this.password = password;
         this.role = role;
     }
 
@@ -42,7 +42,7 @@ public abstract class User {
     }
 
     public void setPassword(String password) {
-        this.password = PasswordHasher.hasher(password);
+        this.password = password;
     }
 
     public Role getRole() {
