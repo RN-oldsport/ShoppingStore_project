@@ -1,69 +1,66 @@
 package model;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
 
     private int id;
-    private String customerUsername;
-    private LocalDateTime timeOfPurchase;
-    private List<OrderItem> orderItems;
-    private BigDecimal cost;
+    private int customerId;
+    private List<OrderItem> items;
+    private int totalPrice;
+    private String orderDate;
 
-
-    public Order(){
-        this.orderItems = new ArrayList<>();
+    public Order() {
+        this.items = new ArrayList<>();
     }
 
-    public Order(int id, String customerUsername,
-                 LocalDateTime timeOfPurchase, List<OrderItem> orderItems, BigDecimal cost){
+    public Order(int id, int customerId, List<OrderItem> items, int totalPrice, String orderDate) {
         this.id = id;
-        this.customerUsername = customerUsername;
-        this.timeOfPurchase = timeOfPurchase;
-        this.orderItems = orderItems;
-        this.cost = cost;
+        this.customerId = customerId;
+        this.items = items;
+        this.totalPrice = totalPrice;
+        this.orderDate = orderDate;
     }
 
-    public int getId(){
+
+
+    public int getId() {
         return id;
     }
-    public void setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
 
 
-    public String getCustomerUsername(){
-        return customerUsername;
+    public int getCustomerId() {
+        return customerId;
     }
-    public void setCustomerUsername(String customerUsername){
-        this.customerUsername = customerUsername;
-    }
-
-
-    public LocalDateTime getTimeOfPurchase(){
-        return timeOfPurchase;
-    }
-    public void setTimeOfPurchase(LocalDateTime timeOfPurchase){
-        this.timeOfPurchase = timeOfPurchase;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
 
-    public List<OrderItem> getOrderItems(){
-        return orderItems;
+    public List<OrderItem> getItems() {
+        return items;
     }
-    public void setOrderItems(List<OrderItem> orderItems){
-        this.orderItems = orderItems;
+    public void setItems(List<OrderItem> items) {
+        this.items = items;
+    }
+
+
+    public int getTotalPrice() {
+        return totalPrice;
+    }
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
 
-    public BigDecimal getCost(){
-        return cost;
+    public String getOrderDate() {
+        return orderDate;
     }
-    public void setCost(BigDecimal cost){
-        this.cost = cost;
+    public void setOrderDate(String orderDate) {
+        this.orderDate = orderDate;
     }
-
 }

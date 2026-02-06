@@ -1,29 +1,29 @@
-package view;
+package view.customer;
 
 import model.Product;
+import view.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductManagementPanel extends JPanel {
+public class CustomerProductPanel extends JPanel {
 
     private JPanel productsContainerPanel;
     private JScrollPane scrollPane;
 
-    private List<ProductCardPanel> cards;
+    private List<CustomerProductCardPanel> cards;
 
-    JButton btnNewProduct;
+    private JButton btnViewCart;
+    private JButton btnPurchase;
 
-
-    public ProductManagementPanel(MainFrame mainFrame) {
+    public CustomerProductPanel(MainFrame mainFrame) {
 
         setLayout(new BorderLayout());
 
         cards = new ArrayList<>();
 
-        // Container panel for product cards
         productsContainerPanel = new JPanel();
         productsContainerPanel.setLayout(new BoxLayout(productsContainerPanel, BoxLayout.Y_AXIS));
         productsContainerPanel.setBackground(Color.WHITE);
@@ -32,38 +32,43 @@ public class ProductManagementPanel extends JPanel {
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-        btnNewProduct = new JButton("New Product");
+        btnViewCart = new JButton("View Cart");
+        btnPurchase = new JButton("Purchase");
 
+        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        topPanel.add(btnViewCart);
+        topPanel.add(btnPurchase);
+
+        add(topPanel, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
-        add(btnNewProduct, BorderLayout.SOUTH);
     }
 
-
-    // IMPORTANT: refresh list
     public void refreshProducts(List<Product> products) {
 
         productsContainerPanel.removeAll();
         cards.clear();
 
         for (Product p : products) {
-            ProductCardPanel card = new ProductCardPanel(p);
-
+            CustomerProductCardPanel card = new CustomerProductCardPanel(p);
             cards.add(card);
 
             productsContainerPanel.add(card);
-            productsContainerPanel.add(Box.createRigidArea(new Dimension(0, 10))); // فاصله بین کارت‌ها
+            productsContainerPanel.add(Box.createRigidArea(new Dimension(0, 10)));
         }
 
         productsContainerPanel.revalidate();
         productsContainerPanel.repaint();
     }
 
-    public List<ProductCardPanel> getCards() {
+    public List<CustomerProductCardPanel> getCards() {
         return cards;
     }
 
-    public JButton getBtnNewProduct() {
-        return btnNewProduct;
+    public JButton getBtnViewCart() {
+        return btnViewCart;
     }
 
+    public JButton getBtnPurchase() {
+        return btnPurchase;
+    }
 }

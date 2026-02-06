@@ -26,7 +26,7 @@ public class JsonProductRepository implements IProductRepository {
 
     @Override
     public List<Product> findAll() {
-        try (FileReader reader = new FileReader("data/json_files/Products.json")) {
+        try (FileReader reader = new FileReader(filePath)) {
             Gson gson = new Gson();
             return gson.fromJson(reader, new TypeToken<List<Product>>(){}.getType());
         } catch (Exception e) {

@@ -1,20 +1,16 @@
 package model;
 
-public class OrderItem {
+public class CartItem {
 
     private int productId;
     private int quantity;
-    private int priceAtPurchase;
 
-    public OrderItem() {
-    }
+    public CartItem() {}
 
-    public OrderItem(int productId, int quantity, int priceAtPurchase) {
+    public CartItem(int productId, int quantity) {
         this.productId = productId;
         this.quantity = quantity;
-        this.priceAtPurchase = priceAtPurchase;
     }
-
 
 
     public int getProductId() {
@@ -33,10 +29,11 @@ public class OrderItem {
     }
 
 
-    public int getPriceAtPurchase() {
-        return priceAtPurchase;
+    public void increaseQuantity(int amount) {
+        this.quantity += amount;
     }
-    public void setPriceAtPurchase(int priceAtPurchase) {
-        this.priceAtPurchase = priceAtPurchase;
+    public void decreaseQuantity(int amount) {
+        this.quantity -= amount;
     }
+
 }

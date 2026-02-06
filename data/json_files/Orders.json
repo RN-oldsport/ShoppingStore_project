@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "customerId": 4,
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 1,
+        "priceAtPurchase": 120000
+      }
+    ],
+    "totalPrice": 120000,
+    "orderDate": "2026-02-06T20:58:06.274985600"
+  }
+]

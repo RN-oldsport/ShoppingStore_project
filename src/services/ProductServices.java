@@ -40,14 +40,14 @@ public class ProductServices {
 
 
     public OperationResult<Void> deleteProduct(int id) {
-        Product product = findById(id);
+        Product product = findProductById(id);
         products.remove(product);
         repo.saveAll(products);
         return new OperationResult<>(true, "Successfully deleted product");
     }
 
 
-    private Product findById(int id) {
+    public Product findProductById(int id) {
         Product product = products.stream()
                 .filter(p -> p.getId() == id)
                 .findFirst()
@@ -58,7 +58,7 @@ public class ProductServices {
 
 
     public OperationResult<Void> modifyProductName(int id, String newName) {
-        Product product = findById(id);
+        Product product = findProductById(id);
         if (product == null) {
             return new OperationResult<>(false, "No such product with id " + id);
         }
@@ -69,7 +69,7 @@ public class ProductServices {
 
 
     public OperationResult<Void> modifyProductCategory(int id, String newCategory) {
-        Product product = findById(id);
+        Product product = findProductById(id);
         if (product == null) {
             return new OperationResult<>(false, "No such product with id " + id);
         }
@@ -80,7 +80,7 @@ public class ProductServices {
 
 
     public OperationResult<Void> modifyProductPrice(int id, int newPrice) {
-        Product product = findById(id);
+        Product product = findProductById(id);
         if (product == null) {
             return new OperationResult<>(false, "No such product with id " + id);
         }
@@ -91,7 +91,7 @@ public class ProductServices {
 
 
     public OperationResult<Void> modifyProductStockQuantity(int id, int newStockQuantity) {
-        Product product = findById(id);
+        Product product = findProductById(id);
         if (product == null) {
             return new OperationResult<>(false, "No such product with id " + id);
         }
@@ -102,7 +102,7 @@ public class ProductServices {
 
 
     public OperationResult<Void> modifyProductDescription(int id, String newDescription) {
-        Product product = findById(id);
+        Product product = findProductById(id);
         if (product == null) {
             return new OperationResult<>(false, "No such product with id " + id);
         }
@@ -113,7 +113,7 @@ public class ProductServices {
 
 
     public OperationResult<Void> modifyProductImage(int id, String newImage) {
-        Product product = findById(id);
+        Product product = findProductById(id);
         if (product == null) {
             return new OperationResult<>(false, "No such product with id " + id);
         }
