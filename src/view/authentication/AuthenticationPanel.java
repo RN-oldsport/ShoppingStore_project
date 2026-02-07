@@ -7,8 +7,6 @@ import java.awt.*;
 
 public class AuthenticationPanel extends JPanel {
 
-    private MainFrame mainFrame;
-
     private JTextField txtUsername;
     private JPasswordField txtPassword;
     private JButton btnLogin;
@@ -17,7 +15,6 @@ public class AuthenticationPanel extends JPanel {
     private JLabel lblMessage;
 
     public AuthenticationPanel(MainFrame mainFrame) {
-        this.mainFrame = mainFrame;
 
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();

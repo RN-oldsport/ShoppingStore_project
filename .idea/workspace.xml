@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="New Product Button is centered now.">
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ProductCardPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ProductCardPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/admin/ProductCardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ProductCardPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/authentication/AuthenticationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/authentication/AuthenticationPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/admin-ui",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/cyb/ShoppingStore_project/data/json_files",
     "node.js.detected.package.eslint": "true",
