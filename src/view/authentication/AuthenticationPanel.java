@@ -39,14 +39,14 @@ public class AuthenticationPanel extends JPanel {
         gbc.gridx = 1;
         add(txtPassword, gbc);
 
-        btnLogin = new JButton("Login");
+        btnSignup = new JButton("Signup");
         gbc.gridx = 0;
         gbc.gridy = 2;
-        add(btnLogin, gbc);
-
-        btnSignup = new JButton("Signup");
-        gbc.gridx = 1;
         add(btnSignup, gbc);
+
+        btnLogin = new JButton("Login");
+        gbc.gridx = 1;
+        add(btnLogin, gbc);
 
         lblMessage = new JLabel(" ");
         lblMessage.setForeground(Color.RED);
