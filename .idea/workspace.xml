@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Login fixed.">
+    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Cart Handling is On.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/json_files/Orders.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json_files/Orders.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/json_files/Products.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json_files/Products.json" afterDir="false" />
@@ -12,31 +12,15 @@
       <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/controller/CustomerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/CartServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/CartServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/OrderServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/OrderServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/CustomerServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/CustomerServices.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/ModifyProductDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/NewProductDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/ProductCardPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/ProductManagementPanel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/CartServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CartServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/CustomerServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CustomerServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/OrderServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ModifyProductDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ModifyProductDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/NewProductDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/NewProductDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ProductCardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ProductCardPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ProductManagementPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ProductManagementPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/authentication/AuthenticationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/authentication/AuthenticationPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/customer/CartDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CartDialog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,33 +67,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main (2).executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main (3).executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cyb/ShoppingStore_project/data/json_files&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/cyb/ShoppingStore_project/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main (1).executor": "Run",
+    "Application.Main (2).executor": "Run",
+    "Application.Main (3).executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Test (1).executor": "Run",
+    "Application.Test.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/cyb/ShoppingStore_project/data/json_files",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/cyb/ShoppingStore_project/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cyb\ShoppingStore_project\data\json_files" />
@@ -198,9 +182,7 @@
       <list>
         <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +221,8 @@
       <workItem from="1770343477630" duration="9000" />
       <workItem from="1770374673272" duration="23061000" />
       <workItem from="1770405820264" duration="650000" />
-      <workItem from="1770406887983" duration="8882000" />
+      <workItem from="1770406887983" duration="9008000" />
+      <workItem from="1770472170992" duration="6691000" />
     </task>
     <task id="LOCAL-00001" summary="Users Json file created">
       <option name="closed" value="true" />
@@ -337,7 +320,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770422158446</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Cart Handling is On.">
+      <option name="closed" value="true" />
+      <created>1770427008845</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1770427008845</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Cart Handling is On.">
+      <option name="closed" value="true" />
+      <created>1770427022543</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1770427022543</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +365,8 @@
     <MESSAGE value="Done." />
     <MESSAGE value="Done 2nd." />
     <MESSAGE value="Login fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Login fixed." />
+    <MESSAGE value="Cart Handling is On." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cart Handling is On." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -384,6 +384,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/services/CartServices.java</url>
+          <line>59</line>
+          <properties class="services.CartServices" method="increaseQuantity">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

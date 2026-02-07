@@ -47,14 +47,14 @@ public class CustomerController {
 
 
     private void refreshCustomerPanel() {
-        loadProductsToPanel();
-        connectProductCards();
+        loadProductsToPanel(); // Updates products and cards + clears all old things inside container
+        connectProductCards(); // Connects listeners to cards again
     }
 
 
     private void loadProductsToPanel() {
-        List<Product> products = productService.getProducts();
-        customerPanel.refreshProducts(products);
+        List<Product> products = productService.getProducts(); // Loads new product list from repo
+        customerPanel.refreshProducts(products); // Loads new cards to customer panel, with passing new products list to make cards
     }
 
 
@@ -69,7 +69,11 @@ public class CustomerController {
                 Customer customer = (Customer) mainFrame.getCurrentUser();
                 Product product = card.getProduct();
 
+                // Adds and Saves into Users repo
                 cartService.addToCart(customer, product, 1);
+
+                // Set this customer to main frame
+                mainFrame.setCurrentUser(customer);
 
                 JOptionPane.showMessageDialog(mainFrame,
                         "Added to cart: " + product.getName());

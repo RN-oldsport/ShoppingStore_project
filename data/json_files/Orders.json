@@ -63,5 +63,44 @@
     ],
     "totalPrice": 120000,
     "orderDate": "2026-02-07T04:31:38.376403700"
+  },
+  {
+    "id": 6,
+    "customerId": 2,
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 1,
+        "priceAtPurchase": 120000
+      }
+    ],
+    "totalPrice": 120000,
+    "orderDate": "2026-02-07T17:28:39.918957600"
+  },
+  {
+    "id": 7,
+    "customerId": 2,
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 1,
+        "priceAtPurchase": 120000
+      }
+    ],
+    "totalPrice": 120000,
+    "orderDate": "2026-02-07T17:58:15.591583500"
+  },
+  {
+    "id": 8,
+    "customerId": 2,
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 2,
+        "priceAtPurchase": 120000
+      }
+    ],
+    "totalPrice": 240000,
+    "orderDate": "2026-02-07T19:55:13.495678600"
   }
 ]
