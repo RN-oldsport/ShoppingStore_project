@@ -40,11 +40,13 @@ public class AuthenticationPanel extends JPanel {
         add(txtPassword, gbc);
 
         btnSignup = new JButton("Signup");
+        btnSignup.setBackground(new Color(190, 240, 240));
         gbc.gridx = 0;
         gbc.gridy = 2;
         add(btnSignup, gbc);
 
         btnLogin = new JButton("Login");
+        btnLogin.setBackground(new Color(190, 240, 240));
         gbc.gridx = 1;
         add(btnLogin, gbc);
 
