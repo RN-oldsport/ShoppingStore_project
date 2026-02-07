@@ -81,8 +81,8 @@ public class ProductCardPanel extends JPanel {
 
         // Bottom button panel
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(1, 2));
-        buttonPanel.setBackground(new Color(240, 240, 240));
+        buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 50, 5));
+        buttonPanel.setBackground(new Color(20, 24, 240));
 
         buttonPanel.add(btnModify);
         buttonPanel.add(btnDelete);

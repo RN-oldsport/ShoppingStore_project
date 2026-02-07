@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Cart dialog bug fixed.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/CartServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/CartServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ProductManagementPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ProductManagementPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/admin/ProductManagementPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ProductManagementPanel.java" afterDir="false" />
+    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="New Product Button is centered now.">
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ProductCardPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ProductCardPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/admin/ProductCardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ProductCardPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,7 +354,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770503270193</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="New Product Button is centered now.">
+      <option name="closed" value="true" />
+      <created>1770506032018</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1770506032018</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +394,8 @@
     <MESSAGE value="Cart Handling is On." />
     <MESSAGE value=".gitignore added" />
     <MESSAGE value="Cart dialog bug fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cart dialog bug fixed." />
+    <MESSAGE value="New Product Button is centered now." />
+    <option name="LAST_COMMIT_MESSAGE" value="New Product Button is centered now." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
