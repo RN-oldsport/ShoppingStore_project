@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "username": "Admin",
+    "password": "c6f3ac57944a531490cd39902d0f777715fd005efac9a30622d5f5205e7f6894",
+    "role": "ADMIN"
+  },
+  {
+    "cart": {
+      "items": []
+    },
+    "balance": 40000.0,
+    "id": 2,
+    "username": "Pop",
+    "password": "c6f3ac57944a531490cd39902d0f777715fd005efac9a30622d5f5205e7f6894",
+    "role": "CUSTOMER"
+  }
+]
