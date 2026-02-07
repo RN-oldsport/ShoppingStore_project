@@ -1,6 +1,4 @@
-package view;
-
-import model.Product;
+package view.admin;
 
 import javax.swing.*;
 import java.awt.*;
@@ -72,7 +70,7 @@ public class NewProductDialog extends JDialog {
         add(bottomPanel, BorderLayout.SOUTH);
     }
 
-    // ------------------ Getters for Controller ------------------
+
 
     public JButton getBtnAdd() {
         return btnAdd;

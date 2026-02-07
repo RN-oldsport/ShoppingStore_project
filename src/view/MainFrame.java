@@ -2,7 +2,7 @@ package view;
 
 import model.Role;
 import model.User;
-import view.ProductManagementPanel;
+import view.admin.ProductManagementPanel;
 import view.customer.CustomerProductPanel;
 import view.authentication.AuthenticationPanel;
 
@@ -52,16 +52,14 @@ public class MainFrame extends JFrame {
         setVisible(true);
     }
 
-    // ------------------------
+
     // Switch Panel
-    // ------------------------
     public void showPanel(String panelName) {
         cardLayout.show(mainContainer, panelName);
     }
 
-    // ------------------------
+
     // Current User Handling
-    // ------------------------
     public void setCurrentUser(User user) {
         this.currentUser = user;
 
@@ -77,9 +75,8 @@ public class MainFrame extends JFrame {
         return currentUser;
     }
 
-    // ------------------------
+
     // Getters for Controllers
-    // ------------------------
     public AuthenticationPanel getAuthenticationPanel() {
         return authenticationPanel;
     }

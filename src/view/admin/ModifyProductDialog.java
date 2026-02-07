@@ -1,4 +1,4 @@
-package view;
+package view.admin;
 
 import model.Product;
 
@@ -96,7 +96,7 @@ public class ModifyProductDialog extends JDialog {
         add(bottomPanel, BorderLayout.SOUTH);
     }
 
-    // ------------------ Getters for Controller ------------------
+
 
     public JButton getBtnUpdateName() {
         return btnUpdateName;

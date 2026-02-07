@@ -59,7 +59,7 @@ public class AuthenticationPanel extends JPanel {
         add(lblMessage, gbc);
     }
 
-    // ----------------- Getters -----------------
+
     public JTextField getTxtUsername() {
         return txtUsername;
     }

@@ -42,9 +42,8 @@ public class CartDialog extends JDialog {
         setLocationRelativeTo(parent);
     }
 
-    // -------------------------
+
     // Refresh Items in Dialog
-    // -------------------------
     public void refreshItems(List<CartItem> items) {
         itemsContainer.removeAll();
         itemPanels.clear();
@@ -53,16 +52,15 @@ public class CartDialog extends JDialog {
             CartItemPanel panel = new CartItemPanel(item);
             itemPanels.add(panel);
             itemsContainer.add(panel);
-            itemsContainer.add(Box.createRigidArea(new Dimension(0, 10)));
+            itemsContainer.add(Box.createRigidArea(new Dimension(1, 10)));
         }
 
         itemsContainer.revalidate();
         itemsContainer.repaint();
     }
 
-    // -------------------------
+
     // Getter for CartItemPanels (for controller)
-    // -------------------------
     public List<CartItemPanel> getItemPanels() {
         return itemPanels;
     }

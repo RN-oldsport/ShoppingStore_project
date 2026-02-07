@@ -4,6 +4,10 @@ import common.OperationResult;
 import model.Product;
 import services.ProductServices;
 import view.*;
+import view.admin.ModifyProductDialog;
+import view.admin.NewProductDialog;
+import view.admin.ProductCardPanel;
+import view.admin.ProductManagementPanel;
 
 import javax.swing.*;
 import java.util.List;
@@ -19,35 +23,31 @@ public class ProductController {
         this.productServices = productServices;
         this.adminPanel = mainFrame.getProductManagementPanel();
 
-        // وصل کردن دکمه New Product
+
         connectNewProductButton();
 
-        // بارگذاری اولیه محصولات
+
         loadProductsToPanel();
     }
 
-    // ==========================
+
+
     // Load Products into Panel
-    // ==========================
     private void loadProductsToPanel() {
         List<Product> products = productServices.getProducts();
         adminPanel.refreshProducts(products);
 
-        // بعد از refresh دکمه‌های Modify و Delete هر کارت را وصل می‌کنیم
         connectCardButtons();
     }
 
-    // ==========================
+
     // Connect Buttons of Product Cards
-    // ==========================
     private void connectCardButtons() {
         List<ProductCardPanel> cards = adminPanel.getCards();
 
         for (ProductCardPanel card : cards) {
 
-            // --------------------------
             // Delete Button
-            // --------------------------
             card.getBtnDelete().addActionListener(e -> {
                 int id = card.getProduct().getId();
 
@@ -65,27 +65,22 @@ public class ProductController {
                 }
             });
 
-            // --------------------------
             // Modify Button
-            // --------------------------
             card.getBtnModify().addActionListener(e -> {
                 Product product = card.getProduct();
                 ModifyProductDialog dialog = new ModifyProductDialog(mainFrame, product);
 
-                // وصل کردن دکمه‌های Update به سرویس
                 connectModifyDialogButtons(dialog);
 
                 dialog.setVisible(true);
 
-                // بعد از بستن دیالوگ پنل ریفرش می‌شود
                 loadProductsToPanel();
             });
         }
     }
 
-    // ==========================
+
     // Connect ModifyProductDialog Buttons
-    // ==========================
     private void connectModifyDialogButtons(ModifyProductDialog dialog) {
         Product product = dialog.getProduct();
         int id = product.getId();
@@ -133,11 +128,10 @@ public class ProductController {
         dialog.getBtnClose().addActionListener(e -> dialog.dispose());
     }
 
-    // ==========================
+
     // Connect New Product Button in Panel
-    // ==========================
     private void connectNewProductButton() {
-        JButton btnNewProduct = adminPanel.getBtnNewProduct(); // getter باید در پنل وجود داشته باشد
+        JButton btnNewProduct = adminPanel.getBtnNewProduct();
         btnNewProduct.addActionListener(e -> {
 
             NewProductDialog dialog = new NewProductDialog(mainFrame);

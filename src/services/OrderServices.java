@@ -45,9 +45,7 @@ public class OrderServices {
 
     public OperationResult<Order> placeOrder(int customerId) {
 
-        // ==========================
         // Load Fresh Customer
-        // ==========================
         Customer customer = customerService.getCustomerById(customerId);
 
         if (customer == null)
@@ -61,11 +59,8 @@ public class OrderServices {
         List<CartItem> cartItems = cart.getItems();
         List<OrderItem> orderItems = new ArrayList<>();
 
+        // Validate Items + Calculate Total, Create Order Item
         int totalPrice = 0;
-
-        // ==========================
-        // Validate Items + Calculate Total
-        // ==========================
         for (CartItem cartItem : cartItems) {
 
             int productId = cartItem.getProductId();
@@ -94,9 +89,8 @@ public class OrderServices {
             orderItems.add(orderItem);
         }
 
-        // ==========================
+
         // Check Balance
-        // ==========================
         if (customer.getBalance() < totalPrice) {
             return new OperationResult<>(
                     null,
@@ -106,9 +100,8 @@ public class OrderServices {
             );
         }
 
-        // ==========================
+
         // Reduce Product Stock
-        // ==========================
         for (OrderItem item : orderItems) {
 
             Product product = productServices.findProductById(item.getProductId());
@@ -119,20 +112,18 @@ public class OrderServices {
                     productServices.modifyProductStockQuantity(product.getId(), newStock);
 
             if (!stockResult.isSuccess()) {
-                return new OperationResult<>(null, false,
+                return new OperationResult<>(false,
                         "Failed to update stock for product: " + product.getName());
             }
         }
 
-        // ==========================
-        // Reduce Customer Balance (only here)
-        // ==========================
+
+        // Reduce Customer Balance
         double newBalance = customer.getBalance() - totalPrice;
         customer.setBalance(newBalance);
 
-        // ==========================
+
         // Create Order
-        // ==========================
         int orderId = generateNewOrderId();
 
         Order order = new Order(
@@ -143,21 +134,18 @@ public class OrderServices {
                 LocalDateTime.now().toString()
         );
 
-        // ==========================
+
         // Save Order
-        // ==========================
         List<Order> orders = orderRepo.findAll();
         orders.add(order);
         orderRepo.saveAll(orders);
 
-        // ==========================
+
         // Clear Cart
-        // ==========================
         customer.getCart().getItems().clear();
 
-        // ==========================
-        // Save Customer Changes (balance + cart)
-        // ==========================
+
+        // Save Customer Changes (balance + cart) in User repo
         OperationResult<Void> updateResult = customerService.updateCustomer(customer);
 
         if (!updateResult.isSuccess()) {

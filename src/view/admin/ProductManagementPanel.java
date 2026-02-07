@@ -1,6 +1,7 @@
-package view;
+package view.admin;
 
 import model.Product;
+import view.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -39,7 +40,7 @@ public class ProductManagementPanel extends JPanel {
     }
 
 
-    // IMPORTANT: refresh list
+
     public void refreshProducts(List<Product> products) {
 
         productsContainerPanel.removeAll();
@@ -51,7 +52,7 @@ public class ProductManagementPanel extends JPanel {
             cards.add(card);
 
             productsContainerPanel.add(card);
-            productsContainerPanel.add(Box.createRigidArea(new Dimension(0, 10))); // فاصله بین کارت‌ها
+            productsContainerPanel.add(Box.createRigidArea(new Dimension(0, 10)));
         }
 
         productsContainerPanel.revalidate();

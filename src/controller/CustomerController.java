@@ -38,37 +38,53 @@ public class CustomerController {
         this.orderService = orderService;
         this.customerPanel = mainFrame.getCustomerProductPanel();
 
-        loadProductsToPanel();
-
-        connectProductCards();
         connectViewCartButton();
         connectPurchaseButton();
+
+        refreshCustomerPanel();
+    }
+
+
+
+    private void refreshCustomerPanel() {
+        loadProductsToPanel();
+        connectProductCards();
     }
 
 
     private void loadProductsToPanel() {
         List<Product> products = productService.getProducts();
         customerPanel.refreshProducts(products);
-
     }
 
 
     private void connectProductCards() {
+
         List<CustomerProductCardPanel> cards = customerPanel.getCards();
 
         for (CustomerProductCardPanel card : cards) {
+
             card.getBtnAddToCart().addActionListener(e -> {
+
                 Customer customer = (Customer) mainFrame.getCurrentUser();
                 Product product = card.getProduct();
+
                 cartService.addToCart(customer, product, 1);
-                JOptionPane.showMessageDialog(mainFrame, "Product added to cart: " + product.getName());
+
+                JOptionPane.showMessageDialog(mainFrame,
+                        "Added to cart: " + product.getName());
+
             });
         }
     }
 
+
     private void connectViewCartButton() {
+
         customerPanel.getBtnViewCart().addActionListener(e -> {
+
             Customer customer = (Customer) mainFrame.getCurrentUser();
+
             CartDialog cartDialog = new CartDialog(mainFrame, cartService, customer);
 
             new CartController(cartDialog, cartService, customer);
@@ -77,32 +93,35 @@ public class CustomerController {
         });
     }
 
+
     private void connectPurchaseButton() {
+
         customerPanel.getBtnPurchase().addActionListener(e -> {
+
             Customer customer = (Customer) mainFrame.getCurrentUser();
-            double totalAmount = cartService.calculateCartTotal(customer);
 
-            if (customer.getBalance() < totalAmount) {
-                JOptionPane.showMessageDialog(mainFrame, "Insufficient balance! Please top up.");
-                return;
-            }
+            OperationResult<Order> result = orderService.placeOrder(customer.getId());
 
-            // کم کردن موجودی مشتری
-            var balanceResult = customerService.decreaseBalance(customer.getId(), totalAmount);
-            if (!balanceResult.isSuccess()) {
-                JOptionPane.showMessageDialog(mainFrame, "Error updating balance: " + balanceResult.getMessage());
-                return;
-            }
+            if (result.isSuccess()) {
 
-            // ثبت سفارش
-            OperationResult<Order> orderResult = orderService.placeOrder(customer.getId());
-            if (orderResult.isSuccess()) {
-                JOptionPane.showMessageDialog(mainFrame, "Purchase successful! Order ID: " + orderResult.getData().getId());
-                cartService.clearCart(customer); // خالی کردن سبد خرید بعد از خرید موفق
+                JOptionPane.showMessageDialog(mainFrame,
+                        "Purchase successful! Order ID: " + result.getData().getId());
+
+                // Reload customer from json (updated balance + cleared cart)
+                Customer updatedCustomer = customerService.getCustomerById(customer.getId());
+
+                if (updatedCustomer != null) {
+                    mainFrame.setCurrentUser(updatedCustomer);
+                }
+
+                // Refresh products list (stock updated)
+                refreshCustomerPanel();
+
             } else {
-                JOptionPane.showMessageDialog(mainFrame, "Purchase failed: " + orderResult.getMessage());
+                JOptionPane.showMessageDialog(mainFrame,
+                        "Purchase failed: " + result.getMessage());
             }
+
         });
     }
-
 }

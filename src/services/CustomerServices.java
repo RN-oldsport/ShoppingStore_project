@@ -15,9 +15,8 @@ public class CustomerServices {
         this.userRepository = userRepository;
     }
 
-    // ==========================
+
     // Get Customer by ID
-    // ==========================
     public Customer getCustomerById(int id) {
         List<User> users = userRepository.loadUsers();
         for (User u : users) {
@@ -28,9 +27,8 @@ public class CustomerServices {
         return null;
     }
 
-    // ==========================
+
     // Update Customer (save changes to JSON)
-    // ==========================
     public OperationResult<Void> updateCustomer(Customer customer) {
         List<User> users = userRepository.loadUsers();
         boolean found = false;
@@ -56,9 +54,8 @@ public class CustomerServices {
         return new OperationResult<>(true, "Customer updated successfully");
     }
 
-    // ==========================
+
     // Increase Customer Balance
-    // ==========================
     public OperationResult<Void> increaseBalance(int customerId, double amount) {
         Customer customer = getCustomerById(customerId);
 
@@ -72,9 +69,8 @@ public class CustomerServices {
         return updateCustomer(customer);
     }
 
-    // ==========================
+
     // Decrease Customer Balance
-    // ==========================
     public OperationResult<Void> decreaseBalance(int customerId, double amount) {
         Customer customer = getCustomerById(customerId);
 

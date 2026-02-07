@@ -10,14 +10,15 @@ import java.util.List;
 public class CartServices {
 
     private final ProductServices productServices;
+    private final CustomerServices customerServices;
 
-    public CartServices(ProductServices productServices) {
+    public CartServices(ProductServices productServices, CustomerServices customerServices) {
         this.productServices = productServices;
+        this.customerServices = customerServices;
     }
 
-    // ==========================
+
     // Add Product to Cart
-    // ==========================
     public void addToCart(Customer customer, Product product, int quantity) {
         if (customer.getCart() == null) {
             customer.setCart(new Cart());
@@ -36,20 +37,22 @@ public class CartServices {
 
         // Add new item
         items.add(new CartItem(product.getId(), quantity));
+
+        // Save Changes in Repo (User Repo) ???
+        customerServices.updateCustomer(customer);
     }
 
-    // ==========================
+
     // Remove Item
-    // ==========================
     public void removeFromCart(Customer customer, int productId) {
         Cart cart = customer.getCart();
         if (cart == null) return;
         cart.getItems().removeIf(item -> item.getProductId() == productId);
+        customerServices.updateCustomer(customer); // ??
     }
 
-    // ==========================
+
     // Increase Quantity
-    // ==========================
     public void increaseQuantity(Customer customer, int productId) {
         Cart cart = customer.getCart();
         if (cart == null) return;
@@ -60,11 +63,11 @@ public class CartServices {
                 return;
             }
         }
+        customerServices.updateCustomer(customer);
     }
 
-    // ==========================
+
     // Decrease Quantity
-    // ==========================
     public void decreaseQuantity(Customer customer, int productId) {
         Cart cart = customer.getCart();
         if (cart == null) return;
@@ -78,11 +81,11 @@ public class CartServices {
                 return;
             }
         }
+        customerServices.updateCustomer(customer);
     }
 
-    // ==========================
+
     // Get Cart Items
-    // ==========================
     public List<CartItem> getCartItems(Customer customer) {
         if (customer.getCart() == null) {
             customer.setCart(new Cart());
@@ -90,9 +93,8 @@ public class CartServices {
         return customer.getCart().getItems();
     }
 
-    // ==========================
+
     // Calculate Total Price
-    // ==========================
     public double calculateCartTotal(Customer customer) {
         double total = 0.0;
         if (customer.getCart() == null) return total;
@@ -106,9 +108,8 @@ public class CartServices {
         return total;
     }
 
-    // ==========================
+
     // Clear Cart
-    // ==========================
     public void clearCart(Customer customer) {
         if (customer.getCart() != null) {
             customer.getCart().getItems().clear();

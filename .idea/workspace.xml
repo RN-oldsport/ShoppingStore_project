@@ -4,15 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Done 2nd.">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Login fixed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/json_files/Orders.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json_files/Orders.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/json_files/Products.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json_files/Products.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/json_files/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json_files/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/controller/ProductController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/CartServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/CartServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/OrderServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/OrderServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/ModifyProductDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/NewProductDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/ProductCardPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/ProductManagementPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/CartServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CartServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/CustomerServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CustomerServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/OrderServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ModifyProductDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ModifyProductDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/NewProductDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/NewProductDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ProductCardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ProductCardPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ProductManagementPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ProductManagementPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/authentication/AuthenticationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/authentication/AuthenticationPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/customer/CartDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CartDialog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,19 +135,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.Main" />
-      <module name="ShoppingStore_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ShoppingStore_project" />
@@ -136,7 +147,7 @@
       <module name="ShoppingStore_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.*" />
+          <option name="PATTERN" value="view.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,12 +155,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.Main" />
+      <module name="ShoppingStore_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.Main" />
+      <module name="ShoppingStore_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.Test" />
       <module name="ShoppingStore_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.*" />
+          <option name="PATTERN" value="view.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -202,7 +239,7 @@
       <workItem from="1770343477630" duration="9000" />
       <workItem from="1770374673272" duration="23061000" />
       <workItem from="1770405820264" duration="650000" />
-      <workItem from="1770406887983" duration="3716000" />
+      <workItem from="1770406887983" duration="8882000" />
     </task>
     <task id="LOCAL-00001" summary="Users Json file created">
       <option name="closed" value="true" />
@@ -292,7 +329,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770405323756</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Login fixed.">
+      <option name="closed" value="true" />
+      <created>1770422158446</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1770422158446</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +365,8 @@
     <MESSAGE value="Product completed" />
     <MESSAGE value="Done." />
     <MESSAGE value="Done 2nd." />
-    <option name="LAST_COMMIT_MESSAGE" value="Done 2nd." />
+    <MESSAGE value="Login fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Login fixed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -331,13 +377,13 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/services/AuthenticationService.java</url>
-          <line>24</line>
-          <properties class="services.AuthenticationService" method="login">
+          <url>file://$PROJECT_DIR$/src/services/OrderServices.java</url>
+          <line>45</line>
+          <properties class="services.OrderServices" method="placeOrder">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
