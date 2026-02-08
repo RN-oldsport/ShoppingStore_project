@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="README file added.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/AuthenticationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/di/DependencyContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/OrderServices.java" afterDir="false" />
+    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="README updated.">
+      <change beforePath="$PROJECT_DIR$/src/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -431,7 +426,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770513191236</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Messages updated.">
+      <option name="closed" value="true" />
+      <created>1770545220492</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1770545220492</updated>
+    </task>
+    <task id="LOCAL-00027" summary="README updated.">
+      <option name="closed" value="true" />
+      <created>1770545317617</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1770545317617</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +482,9 @@
     <MESSAGE value="Total Price Label added." />
     <MESSAGE value="Total Price Label getter added." />
     <MESSAGE value="README file added." />
-    <option name="LAST_COMMIT_MESSAGE" value="README file added." />
+    <MESSAGE value="Messages updated." />
+    <MESSAGE value="README updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="README updated." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

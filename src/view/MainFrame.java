@@ -80,7 +80,7 @@ public class MainFrame extends JFrame {
     }
 
 
-    // Getters for Controllers
+
     public AuthenticationPanel getAuthenticationPanel() {
         return authenticationPanel;
     }
