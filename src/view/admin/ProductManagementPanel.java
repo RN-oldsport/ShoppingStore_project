@@ -16,7 +16,7 @@ public class ProductManagementPanel extends JPanel {
     private List<ProductCardPanel> cards;
 
     JButton btnNewProduct;
-
+    JButton btnLogout;
 
     public ProductManagementPanel(MainFrame mainFrame) {
 
@@ -33,16 +33,23 @@ public class ProductManagementPanel extends JPanel {
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-        btnNewProduct = new JButton("New Product");
-        btnNewProduct.setBackground(new Color(190, 240, 240));
-
         add(scrollPane, BorderLayout.CENTER);
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-//        buttonPanel.setBackground(new Color(150, 150, 150));
+        btnNewProduct = new JButton("New Product");
+        btnNewProduct.setBackground(new Color(190, 240, 240));
+
         buttonPanel.add(btnNewProduct);
 
         add(buttonPanel, BorderLayout.SOUTH);
+
+        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        btnLogout = new JButton("Logout");
+        btnLogout.setBackground(new Color(240, 170, 190));
+
+        topPanel.add(btnLogout);
+
+        add(topPanel, BorderLayout.NORTH);
     }
 
 
@@ -71,6 +78,10 @@ public class ProductManagementPanel extends JPanel {
 
     public JButton getBtnNewProduct() {
         return btnNewProduct;
+    }
+
+    public JButton getBtnLogout() {
+        return btnLogout;
     }
 
 }
