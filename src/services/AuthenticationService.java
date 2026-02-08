@@ -38,14 +38,14 @@ public class AuthenticationService {
 
     public OperationResult<Customer> signup(String username, String password) {
         if (username == null || username.isEmpty() || password == null || password.isEmpty())
-            return new OperationResult<>(null, false, "Username or password cannot be empty!");
+            return new OperationResult<>(false, "Username or password cannot be empty!");
 
         List<User> users = userRepo.loadUsers();
 
         // Check if username exists
         for (User user : users) {
             if (user.getUsername().equals(username)) {
-                return new OperationResult<>(null, false, "Username already exists!");
+                return new OperationResult<>(false, "Username already exists!");
             }
         }
 
@@ -61,7 +61,7 @@ public class AuthenticationService {
         boolean saved = userRepo.saveUsers(users);
 
         if (!saved) {
-            return new OperationResult<>(null, false, "Failed to save user to storage!");
+            return new OperationResult<>(false, "Failed to save user to storage!");
         }
 
         return new OperationResult<>(newCustomer, true, "Signup successful!");

@@ -77,7 +77,7 @@ public class OrderServices {
                 return new OperationResult<>(
                         null,
                         false,
-                        "Not enough stock for product: " + product.getName() +
+                        "Not enough stock for : " + product.getName() +
                                 " | Available: " + product.getStockQuantity()
                 );
             }
