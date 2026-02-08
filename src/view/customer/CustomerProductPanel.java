@@ -17,6 +17,7 @@ public class CustomerProductPanel extends JPanel {
 
     private JButton btnViewCart;
     private JButton btnPurchase;
+    private JLabel lblBalance;
 
     public CustomerProductPanel(MainFrame mainFrame) {
 
@@ -34,10 +35,13 @@ public class CustomerProductPanel extends JPanel {
 
         btnViewCart = new JButton("View Cart");
         btnPurchase = new JButton("Purchase");
+        lblBalance = new JLabel("Balance : ");
 
-        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+
+        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 25, 5));
         topPanel.add(btnViewCart);
         topPanel.add(btnPurchase);
+        topPanel.add(lblBalance);
 
         add(topPanel, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
