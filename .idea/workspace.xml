@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Cart Handling is On.">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Label Balance getter method added.">
+      <change beforePath="$PROJECT_DIR$/src/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/customer/CustomerProductPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CustomerProductPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +63,9 @@
     &quot;Application.Test.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/dynamic-balance&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/cyb/ShoppingStore_project/data/json_files&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -337,7 +338,63 @@
       <option name="project" value="LOCAL" />
       <updated>1770427022543</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary=".gitignore added">
+      <option name="closed" value="true" />
+      <created>1770491920079</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1770491920079</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Cart dialog bug fixed.">
+      <option name="closed" value="true" />
+      <created>1770503270193</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1770503270193</updated>
+    </task>
+    <task id="LOCAL-00017" summary="New Product Button is centered now.">
+      <option name="closed" value="true" />
+      <created>1770506032018</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1770506032018</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Authentication Panel didn't use main frame.">
+      <option name="closed" value="true" />
+      <created>1770507371628</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1770507371628</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Login and Signup buttons switched places.">
+      <option name="closed" value="true" />
+      <created>1770508224434</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1770508224434</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Label Balance added to customer product panel top.">
+      <option name="closed" value="true" />
+      <created>1770509348304</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1770509348304</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Label Balance getter method added.">
+      <option name="closed" value="true" />
+      <created>1770509469517</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1770509469517</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +424,14 @@
     <MESSAGE value="Done 2nd." />
     <MESSAGE value="Login fixed." />
     <MESSAGE value="Cart Handling is On." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cart Handling is On." />
+    <MESSAGE value=".gitignore added" />
+    <MESSAGE value="Cart dialog bug fixed." />
+    <MESSAGE value="New Product Button is centered now." />
+    <MESSAGE value="Authentication Panel didn't use main frame." />
+    <MESSAGE value="Login and Signup buttons switched places." />
+    <MESSAGE value="Label Balance added to customer product panel top." />
+    <MESSAGE value="Label Balance getter method added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Label Balance getter method added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -376,6 +440,15 @@
           <url>file://$PROJECT_DIR$/src/services/CustomerServices.java</url>
           <line>50</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/view/customer/CartItemPanel.java</url>
+          <line>50</line>
+          <properties class="view.customer.CartItemPanel" method="refreshQuantity">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
