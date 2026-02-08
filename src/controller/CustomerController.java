@@ -121,6 +121,9 @@ public class CustomerController {
                 // Refresh products list (stock updated)
                 refreshCustomerPanel();
 
+                // Refresh Balance
+                customerPanel.getLblBalance().setText("Balance: " + updatedCustomer.getBalance());
+
             } else {
                 JOptionPane.showMessageDialog(mainFrame,
                         "Purchase failed: " + result.getMessage());

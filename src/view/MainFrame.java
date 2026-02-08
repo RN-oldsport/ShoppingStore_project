@@ -1,5 +1,6 @@
 package view;
 
+import model.Customer;
 import model.Role;
 import model.User;
 import view.admin.ProductManagementPanel;
@@ -68,6 +69,9 @@ public class MainFrame extends JFrame {
             showPanel(ADMIN_PANEL);
         } else {
             showPanel(CUSTOMER_PANEL);
+
+            Customer currentCustomer = (Customer) currentUser;
+            customerProductPanel.getLblBalance().setText("Balance: " + currentCustomer.getBalance());
         }
     }
 

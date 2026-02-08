@@ -7,8 +7,6 @@ import java.awt.*;
 
 public class AuthenticationPanel extends JPanel {
 
-    private MainFrame mainFrame;
-
     private JTextField txtUsername;
     private JPasswordField txtPassword;
     private JButton btnLogin;
@@ -17,7 +15,6 @@ public class AuthenticationPanel extends JPanel {
     private JLabel lblMessage;
 
     public AuthenticationPanel(MainFrame mainFrame) {
-        this.mainFrame = mainFrame;
 
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -42,14 +39,16 @@ public class AuthenticationPanel extends JPanel {
         gbc.gridx = 1;
         add(txtPassword, gbc);
 
-        btnLogin = new JButton("Login");
+        btnSignup = new JButton("Signup");
+        btnSignup.setBackground(new Color(190, 240, 240));
         gbc.gridx = 0;
         gbc.gridy = 2;
-        add(btnLogin, gbc);
-
-        btnSignup = new JButton("Signup");
-        gbc.gridx = 1;
         add(btnSignup, gbc);
+
+        btnLogin = new JButton("Login");
+        btnLogin.setBackground(new Color(190, 240, 240));
+        gbc.gridx = 1;
+        add(btnLogin, gbc);
 
         lblMessage = new JLabel(" ");
         lblMessage.setForeground(Color.RED);

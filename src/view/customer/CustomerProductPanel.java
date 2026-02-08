@@ -1,5 +1,6 @@
 package view.customer;
 
+import model.Customer;
 import model.Product;
 import view.MainFrame;
 
@@ -17,6 +18,8 @@ public class CustomerProductPanel extends JPanel {
 
     private JButton btnViewCart;
     private JButton btnPurchase;
+    private JLabel lblBalance;
+    private Customer customer;
 
     public CustomerProductPanel(MainFrame mainFrame) {
 
@@ -35,9 +38,13 @@ public class CustomerProductPanel extends JPanel {
         btnViewCart = new JButton("View Cart");
         btnPurchase = new JButton("Purchase");
 
-        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        customer = (Customer) mainFrame.getCurrentUser();
+        lblBalance = new JLabel("Balance : ");
+
+        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 25, 5));
         topPanel.add(btnViewCart);
         topPanel.add(btnPurchase);
+        topPanel.add(lblBalance);
 
         add(topPanel, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
@@ -70,5 +77,9 @@ public class CustomerProductPanel extends JPanel {
 
     public JButton getBtnPurchase() {
         return btnPurchase;
+    }
+
+    public JLabel getLblBalance() {
+        return lblBalance;
     }
 }

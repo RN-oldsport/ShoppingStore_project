@@ -36,7 +36,12 @@ public class ProductManagementPanel extends JPanel {
         btnNewProduct = new JButton("New Product");
 
         add(scrollPane, BorderLayout.CENTER);
-        add(btnNewProduct, BorderLayout.SOUTH);
+
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        buttonPanel.setBackground(new Color(90, 240, 240));
+        buttonPanel.add(btnNewProduct);
+
+        add(buttonPanel, BorderLayout.SOUTH);
     }
 
 
