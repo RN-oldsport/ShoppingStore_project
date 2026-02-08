@@ -19,7 +19,7 @@ public class CartItemPanel extends JPanel {
     public CartItemPanel(CartItem item) {
         this.item = item;
 
-        setLayout(new GridLayout(1, 5, 10, 10));
+        setLayout(new FlowLayout(FlowLayout.CENTER, 25, 5));
         setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
         setMaximumSize(new Dimension(Integer.MAX_VALUE, 50));
 
