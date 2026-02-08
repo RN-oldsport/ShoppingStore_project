@@ -19,6 +19,7 @@ public class CustomerProductPanel extends JPanel {
     private JButton btnViewCart;
     private JButton btnPurchase;
     private JLabel lblBalance;
+    private JButton btnlogout;
     private Customer customer;
 
     public CustomerProductPanel(MainFrame mainFrame) {
@@ -38,9 +39,11 @@ public class CustomerProductPanel extends JPanel {
 
         btnViewCart = new JButton("View Cart");
         btnPurchase = new JButton("Purchase");
+        btnlogout = new JButton("Logout");
 
         btnViewCart.setBackground(new Color(190, 240, 240));
         btnPurchase.setBackground(new Color(190, 240, 240));
+        btnlogout.setBackground(new Color(240, 170, 190));
 
         customer = (Customer) mainFrame.getCurrentUser();
         lblBalance = new JLabel("Balance : ");
@@ -49,6 +52,7 @@ public class CustomerProductPanel extends JPanel {
         topPanel.add(btnViewCart);
         topPanel.add(btnPurchase);
         topPanel.add(lblBalance);
+        topPanel.add(btnlogout);
 
         add(topPanel, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
@@ -85,5 +89,9 @@ public class CustomerProductPanel extends JPanel {
 
     public JLabel getLblBalance() {
         return lblBalance;
+    }
+
+    public JButton getBtnlogout() {
+        return btnlogout;
     }
 }
