@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="">
+    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Label Balance getter method added.">
+      <change beforePath="$PROJECT_DIR$/src/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/customer/CustomerProductPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CustomerProductPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -377,7 +378,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770508224434</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Label Balance added to customer product panel top.">
+      <option name="closed" value="true" />
+      <created>1770509348304</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1770509348304</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Label Balance getter method added.">
+      <option name="closed" value="true" />
+      <created>1770509469517</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1770509469517</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +429,9 @@
     <MESSAGE value="New Product Button is centered now." />
     <MESSAGE value="Authentication Panel didn't use main frame." />
     <MESSAGE value="Login and Signup buttons switched places." />
-    <option name="LAST_COMMIT_MESSAGE" value="Login and Signup buttons switched places." />
+    <MESSAGE value="Label Balance added to customer product panel top." />
+    <MESSAGE value="Label Balance getter method added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Label Balance getter method added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
