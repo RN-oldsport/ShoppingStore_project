@@ -30,16 +30,28 @@ public class CartController {
             panel.getBtnIncrease().addActionListener(e -> {
                 cartService.increaseQuantity(customer, panel.getItem().getProductId());
                 panel.refreshQuantity();
+
+                // Total price gets updated
+                double totalCost = cartService.calculateCartTotal(customer);
+                cartDialog.getLblTotalPrice().setText("Total Price: " + totalCost);
             });
 
             panel.getBtnDecrease().addActionListener(e -> {
                 cartService.decreaseQuantity(customer, panel.getItem().getProductId());
                 panel.refreshQuantity();
+
+                // Total price gets updated
+                double totalCost = cartService.calculateCartTotal(customer);
+                cartDialog.getLblTotalPrice().setText("Total Price: " + totalCost);
             });
 
             panel.getBtnRemove().addActionListener(e -> {
                 cartService.removeFromCart(customer, panel.getItem().getProductId());
                 cartDialog.refreshItems(customer.getCart().getItems());
+
+                // Total price gets updated
+                double totalCost = cartService.calculateCartTotal(customer);
+                cartDialog.getLblTotalPrice().setText("Total Price: " + totalCost);
             });
         }
     }

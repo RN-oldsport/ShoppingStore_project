@@ -93,6 +93,7 @@ public class CustomerController {
 
             new CartController(cartDialog, cartService, customer);
 
+            // Total price gets updated
             double totalCost = cartService.calculateCartTotal(customer);
             cartDialog.getLblTotalPrice().setText("Total Price: " + totalCost);
 
