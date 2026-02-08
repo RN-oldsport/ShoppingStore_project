@@ -14,44 +14,56 @@ import services.OrderServices;
 import services.ProductServices;
 import view.MainFrame;
 
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
 
+        SwingUtilities.invokeLater(() -> {
 
-        // Repositories
-        IUserRepository userRepo = new JsonUserRepository("data/json_files/Users.json");
-        IProductRepository productRepo = new JsonProductRepository("data/json_files/Products.json");
-        IOrderRepository orderRepo = new JsonOrderRepository("data/json_files/Orders.json");
+            try {
+                UIManager.setLookAndFeel(
+                        UIManager.getSystemLookAndFeelClassName()
+                );
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
-        // Services
-        CustomerServices customerService = new CustomerServices(userRepo);
-        ProductServices productService = new ProductServices(productRepo);
-        CartServices cartService = new CartServices(productService, customerService);
-        AuthenticationService authService = new AuthenticationService(userRepo);
+            // Repositories
+            IUserRepository userRepo = new JsonUserRepository("data/json_files/Users.json");
+            IProductRepository productRepo = new JsonProductRepository("data/json_files/Products.json");
+            IOrderRepository orderRepo = new JsonOrderRepository("data/json_files/Orders.json");
 
-        OrderServices orderService = new OrderServices(
-                orderRepo,
-                productService,
-                customerService
-        );
+            // Services
+            CustomerServices customerService = new CustomerServices(userRepo);
+            ProductServices productService = new ProductServices(productRepo);
+            CartServices cartService = new CartServices(productService, customerService);
+            AuthenticationService authService = new AuthenticationService(userRepo);
+
+            OrderServices orderService = new OrderServices(
+                    orderRepo,
+                    productService,
+                    customerService
+            );
 
 
-        // Main Frame
-        MainFrame mainFrame = new MainFrame();
+            // Main Frame
+            MainFrame mainFrame = new MainFrame();
 
 
-        // Controllers:
+            // Controllers:
 
             // Authentication
-        new AuthenticationController(mainFrame, authService);
+            new AuthenticationController(mainFrame, authService);
 
             // Admin product management controller
-        new ProductController(mainFrame, productService);
+            new ProductController(mainFrame, productService);
 
             // Customer controller
-        new CustomerController(mainFrame, customerService, productService, cartService, orderService);
+            new CustomerController(mainFrame, customerService, productService, cartService, orderService);
 
 
-        mainFrame.setVisible(true);
+            mainFrame.setVisible(true);
+        });
     }
 }
