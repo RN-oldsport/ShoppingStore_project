@@ -29,13 +29,25 @@ public class NewProductDialog extends JDialog {
     private void initComponents() {
 
         txtName = new JTextField();
+        txtName.setFont(txtName.getFont().deriveFont(14f));
+
         txtCategory = new JTextField();
+        txtCategory.setFont(txtCategory.getFont().deriveFont(14f));
+
         txtPrice = new JTextField();
+        txtPrice.setFont(txtPrice.getFont().deriveFont(14f));
+
         txtStock = new JTextField();
+        txtStock.setFont(txtStock.getFont().deriveFont(14f));
+
         txtDescription = new JTextField();
+        txtDescription.setFont(txtDescription.getFont().deriveFont(14f));
+
         txtImage = new JTextField();
+        txtImage.setFont(txtImage.getFont().deriveFont(14f));
 
         btnAdd = new JButton("Add Item");
+        btnAdd.setFont(btnAdd.getFont().deriveFont(14f));
         btnAdd.setBackground(new Color(190, 240, 240));
     }
 
@@ -45,22 +57,34 @@ public class NewProductDialog extends JDialog {
         fieldsPanel.setLayout(new GridLayout(6, 2, 10, 10));
         fieldsPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        fieldsPanel.add(new JLabel("Name:"));
+        JLabel lblName = new JLabel("Name:");
+        lblName.setFont(lblName.getFont().deriveFont(14f));
+        fieldsPanel.add(lblName);
         fieldsPanel.add(txtName);
 
-        fieldsPanel.add(new JLabel("Category:"));
+        JLabel lblCategory = new JLabel("Category:");
+        lblCategory.setFont(lblCategory.getFont().deriveFont(14f));
+        fieldsPanel.add(lblCategory);
         fieldsPanel.add(txtCategory);
 
-        fieldsPanel.add(new JLabel("Price:"));
+        JLabel lblPrice = new JLabel("Price:");
+        lblPrice.setFont(lblPrice.getFont().deriveFont(14f));
+        fieldsPanel.add(lblPrice);
         fieldsPanel.add(txtPrice);
 
-        fieldsPanel.add(new JLabel("Stock:"));
+        JLabel lblStock = new JLabel("Stock:");
+        lblStock.setFont(lblStock.getFont().deriveFont(14f));
+        fieldsPanel.add(lblStock);
         fieldsPanel.add(txtStock);
 
-        fieldsPanel.add(new JLabel("Description:"));
+        JLabel lblDescription = new JLabel("Description:");
+        lblDescription.setFont(lblDescription.getFont().deriveFont(14f));
+        fieldsPanel.add(lblDescription);
         fieldsPanel.add(txtDescription);
 
-        fieldsPanel.add(new JLabel("Image Path:"));
+        JLabel lblImage = new JLabel("Image Path:");
+        lblImage.setFont(lblImage.getFont().deriveFont(14f));
+        fieldsPanel.add(lblImage);
         fieldsPanel.add(txtImage);
 
         add(fieldsPanel, BorderLayout.CENTER);
@@ -70,8 +94,6 @@ public class NewProductDialog extends JDialog {
 
         add(bottomPanel, BorderLayout.SOUTH);
     }
-
-
 
     public JButton getBtnAdd() {
         return btnAdd;
@@ -100,5 +122,4 @@ public class NewProductDialog extends JDialog {
     public JTextField getTxtImage() {
         return txtImage;
     }
-
 }

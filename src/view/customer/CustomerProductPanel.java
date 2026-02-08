@@ -38,15 +38,22 @@ public class CustomerProductPanel extends JPanel {
         scrollPane.getVerticalScrollBar().setUnitIncrement(16);
 
         btnViewCart = new JButton("View Cart");
+        btnViewCart.setFont(btnViewCart.getFont().deriveFont(14f));
+
         btnPurchase = new JButton("Purchase");
+        btnPurchase.setFont(btnPurchase.getFont().deriveFont(14f));
+
         btnlogout = new JButton("Logout");
+        btnlogout.setFont(btnlogout.getFont().deriveFont(14f));
 
         btnViewCart.setBackground(new Color(190, 240, 240));
         btnPurchase.setBackground(new Color(190, 240, 240));
         btnlogout.setBackground(new Color(240, 170, 190));
 
         customer = (Customer) mainFrame.getCurrentUser();
+
         lblBalance = new JLabel("Balance : ");
+        lblBalance.setFont(lblBalance.getFont().deriveFont(14f));
 
         JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT, 25, 5));
         topPanel.add(btnViewCart);

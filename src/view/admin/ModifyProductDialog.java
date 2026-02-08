@@ -42,33 +42,49 @@ public class ModifyProductDialog extends JDialog {
     private void initComponents() {
 
         txtName = new JTextField(product.getName());
+        txtName.setFont(txtName.getFont().deriveFont(14f));
+
         txtCategory = new JTextField(product.getCategory());
+        txtCategory.setFont(txtCategory.getFont().deriveFont(14f));
+
         txtPrice = new JTextField(String.valueOf(product.getPrice()));
+        txtPrice.setFont(txtPrice.getFont().deriveFont(14f));
+
         txtStock = new JTextField(String.valueOf(product.getStockQuantity()));
+        txtStock.setFont(txtStock.getFont().deriveFont(14f));
+
         txtDescription = new JTextField(product.getDescription());
+        txtDescription.setFont(txtDescription.getFont().deriveFont(14f));
+
         txtImage = new JTextField(product.getImage());
+        txtImage.setFont(txtImage.getFont().deriveFont(14f));
 
         btnUpdateName = new JButton("Update Name");
+        btnUpdateName.setFont(btnUpdateName.getFont().deriveFont(14f));
+        btnUpdateName.setBackground(new Color(190, 240, 240));
+
         btnUpdateCategory = new JButton("Update Category");
+        btnUpdateCategory.setFont(btnUpdateCategory.getFont().deriveFont(14f));
+        btnUpdateCategory.setBackground(new Color(190, 240, 240));
+
         btnUpdatePrice = new JButton("Update Price");
+        btnUpdatePrice.setFont(btnUpdatePrice.getFont().deriveFont(14f));
+        btnUpdatePrice.setBackground(new Color(190, 240, 240));
+
         btnUpdateStock = new JButton("Update Stock");
+        btnUpdateStock.setFont(btnUpdateStock.getFont().deriveFont(14f));
+        btnUpdateStock.setBackground(new Color(190, 240, 240));
+
         btnUpdateDescription = new JButton("Update Description");
+        btnUpdateDescription.setFont(btnUpdateDescription.getFont().deriveFont(14f));
+        btnUpdateDescription.setBackground(new Color(190, 240, 240));
+
         btnUpdateImage = new JButton("Update Image");
+        btnUpdateImage.setFont(btnUpdateImage.getFont().deriveFont(14f));
+        btnUpdateImage.setBackground(new Color(190, 240, 240));
 
         btnClose = new JButton("Close");
-
-        btnUpdateCategory.setBackground(new Color(190, 240, 240));
-        btnUpdatePrice.setBackground(new Color(190, 240, 240));
-        btnUpdateStock.setBackground(new Color(190, 240, 240));
-        btnUpdateDescription.setBackground(new Color(190, 240, 240));
-        btnUpdateImage.setBackground(new Color(190, 240, 240));
-        btnUpdateName.setBackground(new Color(190, 240, 240));
-        btnUpdateCategory.setBackground(new Color(190, 240, 240));
-        btnUpdatePrice.setBackground(new Color(190, 240, 240));
-        btnUpdateStock.setBackground(new Color(190, 240, 240));
-        btnUpdateDescription.setBackground(new Color(190, 240, 240));
-        btnUpdateImage.setBackground(new Color(190, 240, 240));
-
+        btnClose.setFont(btnClose.getFont().deriveFont(14f));
         btnClose.setBackground(new Color(240, 170, 190));
     }
 
@@ -78,27 +94,39 @@ public class ModifyProductDialog extends JDialog {
         fieldsPanel.setLayout(new GridLayout(6, 3, 10, 10));
         fieldsPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        fieldsPanel.add(new JLabel("Name:"));
+        JLabel lblName = new JLabel("Name:");
+        lblName.setFont(lblName.getFont().deriveFont(14f));
+        fieldsPanel.add(lblName);
         fieldsPanel.add(txtName);
         fieldsPanel.add(btnUpdateName);
 
-        fieldsPanel.add(new JLabel("Category:"));
+        JLabel lblCategory = new JLabel("Category:");
+        lblCategory.setFont(lblCategory.getFont().deriveFont(14f));
+        fieldsPanel.add(lblCategory);
         fieldsPanel.add(txtCategory);
         fieldsPanel.add(btnUpdateCategory);
 
-        fieldsPanel.add(new JLabel("Price:"));
+        JLabel lblPrice = new JLabel("Price:");
+        lblPrice.setFont(lblPrice.getFont().deriveFont(14f));
+        fieldsPanel.add(lblPrice);
         fieldsPanel.add(txtPrice);
         fieldsPanel.add(btnUpdatePrice);
 
-        fieldsPanel.add(new JLabel("Stock:"));
+        JLabel lblStock = new JLabel("Stock:");
+        lblStock.setFont(lblStock.getFont().deriveFont(14f));
+        fieldsPanel.add(lblStock);
         fieldsPanel.add(txtStock);
         fieldsPanel.add(btnUpdateStock);
 
-        fieldsPanel.add(new JLabel("Description:"));
+        JLabel lblDescription = new JLabel("Description:");
+        lblDescription.setFont(lblDescription.getFont().deriveFont(14f));
+        fieldsPanel.add(lblDescription);
         fieldsPanel.add(txtDescription);
         fieldsPanel.add(btnUpdateDescription);
 
-        fieldsPanel.add(new JLabel("Image Path:"));
+        JLabel lblImage = new JLabel("Image Path:");
+        lblImage.setFont(lblImage.getFont().deriveFont(14f));
+        fieldsPanel.add(lblImage);
         fieldsPanel.add(txtImage);
         fieldsPanel.add(btnUpdateImage);
 
@@ -109,8 +137,6 @@ public class ModifyProductDialog extends JDialog {
 
         add(bottomPanel, BorderLayout.SOUTH);
     }
-
-
 
     public JButton getBtnUpdateName() {
         return btnUpdateName;

@@ -36,7 +36,9 @@ public class CartDialog extends JDialog {
         add(scrollPane, BorderLayout.CENTER);
 
         JButton btnClose = new JButton("Close");
+        btnClose.setFont(btnClose.getFont().deriveFont(14f));
         btnClose.addActionListener(e -> setVisible(false));
+
         JPanel bottomPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         btnClose.setBackground(new Color(240, 170, 190));
         bottomPanel.add(btnClose);
@@ -44,6 +46,7 @@ public class CartDialog extends JDialog {
 
         JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         lblTotalPrice = new JLabel("Total Price: 0");
+        lblTotalPrice.setFont(lblTotalPrice.getFont().deriveFont(14f));
         topPanel.add(lblTotalPrice);
         add(topPanel, BorderLayout.NORTH);
 
@@ -52,8 +55,6 @@ public class CartDialog extends JDialog {
         setLocationRelativeTo(parent);
     }
 
-
-    // Refresh Items in Dialog
     public void refreshItems(List<CartItem> items) {
         itemsContainer.removeAll();
         itemPanels.clear();
@@ -69,13 +70,11 @@ public class CartDialog extends JDialog {
         itemsContainer.repaint();
     }
 
-
-    // Getter for CartItemPanels (for controller)
     public List<CartItemPanel> getItemPanels() {
         return itemPanels;
     }
 
-    public  JLabel getLblTotalPrice() {
+    public JLabel getLblTotalPrice() {
         return lblTotalPrice;
     }
 }

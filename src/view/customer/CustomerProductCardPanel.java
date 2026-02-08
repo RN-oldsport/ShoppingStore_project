@@ -44,16 +44,27 @@ public class CustomerProductCardPanel extends JPanel {
             lblImage.setIcon(new ImageIcon(img));
         } else {
             lblImage.setText("No Image");
+            lblImage.setFont(lblImage.getFont().deriveFont(14f));
         }
 
         lblTitle = new JLabel("Title: " + product.getName());
+        lblTitle.setFont(lblTitle.getFont().deriveFont(14f));
+
         lblPrice = new JLabel("Price: " + product.getPrice());
+        lblPrice.setFont(lblPrice.getFont().deriveFont(14f));
+
         lblStock = new JLabel("Stock: " + product.getStockQuantity());
+        lblStock.setFont(lblStock.getFont().deriveFont(14f));
+
         lblCategory = new JLabel("Category: " + product.getCategory());
+        lblCategory.setFont(lblCategory.getFont().deriveFont(14f));
+
         lblDescription = new JLabel("Description: " + product.getDescription());
+        lblDescription.setFont(lblDescription.getFont().deriveFont(14f));
 
         btnAddToCart = new JButton("Add To Cart");
         btnAddToCart.setBackground(new Color(190, 240, 240));
+        btnAddToCart.setFont(btnAddToCart.getFont().deriveFont(14f));
     }
 
     private void buildUI() {

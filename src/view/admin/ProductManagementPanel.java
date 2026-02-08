@@ -24,7 +24,6 @@ public class ProductManagementPanel extends JPanel {
 
         cards = new ArrayList<>();
 
-        // Container panel for product cards
         productsContainerPanel = new JPanel();
         productsContainerPanel.setLayout(new BoxLayout(productsContainerPanel, BoxLayout.Y_AXIS));
         productsContainerPanel.setBackground(Color.WHITE);
@@ -34,27 +33,24 @@ public class ProductManagementPanel extends JPanel {
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPane.getVerticalScrollBar().setUnitIncrement(16);
 
-
         add(scrollPane, BorderLayout.CENTER);
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         btnNewProduct = new JButton("New Product");
+        btnNewProduct.setFont(btnNewProduct.getFont().deriveFont(14f));
         btnNewProduct.setBackground(new Color(190, 240, 240));
-
         buttonPanel.add(btnNewProduct);
 
         add(buttonPanel, BorderLayout.SOUTH);
 
         JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         btnLogout = new JButton("Logout");
+        btnLogout.setFont(btnLogout.getFont().deriveFont(14f));
         btnLogout.setBackground(new Color(240, 170, 190));
-
         topPanel.add(btnLogout);
 
         add(topPanel, BorderLayout.NORTH);
     }
-
-
 
     public void refreshProducts(List<Product> products) {
 
@@ -63,9 +59,7 @@ public class ProductManagementPanel extends JPanel {
 
         for (Product p : products) {
             ProductCardPanel card = new ProductCardPanel(p);
-
             cards.add(card);
-
             productsContainerPanel.add(card);
             productsContainerPanel.add(Box.createRigidArea(new Dimension(0, 10)));
         }
@@ -85,5 +79,4 @@ public class ProductManagementPanel extends JPanel {
     public JButton getBtnLogout() {
         return btnLogout;
     }
-
 }

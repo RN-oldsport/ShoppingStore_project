@@ -28,7 +28,7 @@ public class CartItemPanel extends JPanel {
 
         setLayout(new FlowLayout(FlowLayout.CENTER, 25, 5));
         setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
-        setMaximumSize(new Dimension(Integer.MAX_VALUE, 50));
+        setMaximumSize(new Dimension(Integer.MAX_VALUE, 60));
 
         initComponents();
         buildUI();
@@ -38,24 +38,33 @@ public class CartItemPanel extends JPanel {
         product = productServices.findProductById(item.getProductId());
 
         lblImage = new JLabel();
-        lblImage.setPreferredSize(new Dimension(40, 40));
+        lblImage.setPreferredSize(new Dimension(50, 50));
         lblImage.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
         lblImage.setHorizontalAlignment(SwingConstants.CENTER);
 
         if (product.getImage() != null && !product.getImage().isEmpty()) {
             ImageIcon icon = new ImageIcon(product.getImage());
-            Image img = icon.getImage().getScaledInstance(40, 40, Image.SCALE_SMOOTH);
+            Image img = icon.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
             lblImage.setIcon(new ImageIcon(img));
         } else {
             lblImage.setText("No Image");
+            lblImage.setFont(lblImage.getFont().deriveFont(14f));
         }
-        
+
         lblProductId = new JLabel("Product ID: " + item.getProductId());
+        lblProductId.setFont(lblProductId.getFont().deriveFont(14f));
+
         lblQuantity = new JLabel("Qty: " + item.getQuantity());
+        lblQuantity.setFont(lblQuantity.getFont().deriveFont(14f));
 
         btnIncrease = new JButton("+");
+        btnIncrease.setFont(btnIncrease.getFont().deriveFont(14f));
+
         btnDecrease = new JButton("-");
+        btnDecrease.setFont(btnDecrease.getFont().deriveFont(14f));
+
         btnRemove = new JButton("Remove");
+        btnRemove.setFont(btnRemove.getFont().deriveFont(14f));
 
         btnIncrease.setBackground(new Color(190, 240, 240));
         btnDecrease.setBackground(new Color(190, 240, 240));
