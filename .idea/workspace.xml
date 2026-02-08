@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Admin Scroll bar got smoother.">
+    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Modern look and feel added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/authentication/AuthenticationPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/authentication/AuthenticationPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/authentication/AuthenticationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/authentication/AuthenticationPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -508,7 +508,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770552995093</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Modern look and feel added.">
+      <option name="closed" value="true" />
+      <created>1770556886898</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1770556886898</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +534,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Json implementation of Product repository created" />
     <MESSAGE value="Product Panel created" />
     <MESSAGE value="Product completed" />
     <MESSAGE value="Done." />
@@ -551,7 +558,8 @@
     <MESSAGE value="Logout Jbutton created" />
     <MESSAGE value="Customer logout is done!" />
     <MESSAGE value="Admin Scroll bar got smoother." />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin Scroll bar got smoother." />
+    <MESSAGE value="Modern look and feel added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modern look and feel added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

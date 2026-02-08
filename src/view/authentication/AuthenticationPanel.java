@@ -22,31 +22,37 @@ public class AuthenticationPanel extends JPanel {
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
         JLabel lblUsername = new JLabel("Username:");
+        lblUsername.setFont(lblUsername.getFont().deriveFont(Font.PLAIN, 14f));
         gbc.gridx = 0;
         gbc.gridy = 0;
         add(lblUsername, gbc);
 
         txtUsername = new JTextField(20);
+        txtUsername.setFont(txtUsername.getFont().deriveFont(Font.PLAIN, 14f));
         gbc.gridx = 1;
         add(txtUsername, gbc);
 
         JLabel lblPassword = new JLabel("Password:");
+        lblPassword.setFont(lblPassword.getFont().deriveFont(Font.PLAIN, 14f));
         gbc.gridx = 0;
         gbc.gridy = 1;
         add(lblPassword, gbc);
 
         txtPassword = new JPasswordField(20);
+        txtPassword.setFont(txtPassword.getFont().deriveFont(Font.PLAIN, 14f));
         gbc.gridx = 1;
         add(txtPassword, gbc);
 
         btnSignup = new JButton("Signup");
         btnSignup.setBackground(new Color(190, 240, 240));
+        btnSignup.setFont(btnSignup.getFont().deriveFont(Font.PLAIN, 14f));
         gbc.gridx = 0;
         gbc.gridy = 2;
         add(btnSignup, gbc);
 
         btnLogin = new JButton("Login");
         btnLogin.setBackground(new Color(190, 240, 240));
+        btnLogin.setFont(btnLogin.getFont().deriveFont(Font.PLAIN, 14f));
         gbc.gridx = 1;
         add(btnLogin, gbc);
 
