@@ -1,11 +1,50 @@
 [
   {
-    "id": 1,
-    "name": "cyb",
-    "category": "mive",
-    "price": 120000,
-    "stockQuantity": 1,
-    "description": "yummy!",
-    "image": "C:\\Users\\cyb\\Pictures\\Saved Pictures\\w08161-wdq.jpg"
+    "id": 9,
+    "name": "TUF Gaming Laptop",
+    "category": "Electronics",
+    "price": 740000,
+    "stockQuantity": 6,
+    "description": "Durable ASUS TUF gaming laptop with powerful performance, suitable for gaming and programming.",
+    "image": "data\\images\\laptop.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Bean Bag Sofa",
+    "category": "Furniture",
+    "price": 34000,
+    "stockQuantity": 10,
+    "description": "Soft and comfortable bean bag sofa, perfect for relaxing and modern room design.",
+    "image": "data\\images\\beanbag_sofa.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Office Chair",
+    "category": "Furniture",
+    "price": 12000,
+    "stockQuantity": 14,
+    "description": "Ergonomic office chair with adjustable height and comfortable back support.",
+    "image": "data\\images\\office_chair.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Smart Watch",
+    "category": "Electronics",
+    "price": 35000,
+    "stockQuantity": 18,
+    "description": "Modern smart watch with fitness tracking, notifications, and stylish design.",
+    "image": "data\\images\\smart_watch.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Work Backpack",
+    "category": "Bags",
+    "price": 7000,
+    "stockQuantity": 20,
+    "description": "Stylish and professional work backpack, suitable for laptop and daily office use.",
+    "image": "data\\images\\work_backpack.jpg"
   }
 ]
+
+
+
