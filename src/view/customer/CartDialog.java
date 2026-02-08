@@ -28,7 +28,6 @@ public class CartDialog extends JDialog {
 
         JScrollPane scrollPane = new JScrollPane(itemsContainer);
         scrollPane.setPreferredSize(new Dimension(600, 400));
-
         add(scrollPane, BorderLayout.CENTER);
 
         JButton btnClose = new JButton("Close");
@@ -36,6 +35,11 @@ public class CartDialog extends JDialog {
         JPanel bottomPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         bottomPanel.add(btnClose);
         add(bottomPanel, BorderLayout.SOUTH);
+
+        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel lblTotalPrice = new JLabel("Total Price: ");
+        topPanel.add(lblTotalPrice);
+        add(topPanel, BorderLayout.NORTH);
 
         refreshItems(cartService.getCartItems(customer));
         pack();
