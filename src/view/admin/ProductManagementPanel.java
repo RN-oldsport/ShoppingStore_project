@@ -34,11 +34,12 @@ public class ProductManagementPanel extends JPanel {
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
         btnNewProduct = new JButton("New Product");
+        btnNewProduct.setBackground(new Color(190, 240, 240));
 
         add(scrollPane, BorderLayout.CENTER);
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        buttonPanel.setBackground(new Color(90, 240, 240));
+//        buttonPanel.setBackground(new Color(150, 150, 150));
         buttonPanel.add(btnNewProduct);
 
         add(buttonPanel, BorderLayout.SOUTH);

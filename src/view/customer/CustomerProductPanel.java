@@ -38,6 +38,9 @@ public class CustomerProductPanel extends JPanel {
         btnViewCart = new JButton("View Cart");
         btnPurchase = new JButton("Purchase");
 
+        btnViewCart.setBackground(new Color(190, 240, 240));
+        btnPurchase.setBackground(new Color(190, 240, 240));
+
         customer = (Customer) mainFrame.getCurrentUser();
         lblBalance = new JLabel("Balance : ");
 

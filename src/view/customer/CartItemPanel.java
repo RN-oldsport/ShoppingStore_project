@@ -34,6 +34,10 @@ public class CartItemPanel extends JPanel {
         btnIncrease = new JButton("+");
         btnDecrease = new JButton("-");
         btnRemove = new JButton("Remove");
+
+        btnIncrease.setBackground(new Color(190, 240, 240));
+        btnDecrease.setBackground(new Color(190, 240, 240));
+        btnRemove.setBackground(new Color(240, 170, 190));
     }
 
     private void buildUI() {

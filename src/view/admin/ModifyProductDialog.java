@@ -56,6 +56,20 @@ public class ModifyProductDialog extends JDialog {
         btnUpdateImage = new JButton("Update Image");
 
         btnClose = new JButton("Close");
+
+        btnUpdateCategory.setBackground(new Color(190, 240, 240));
+        btnUpdatePrice.setBackground(new Color(190, 240, 240));
+        btnUpdateStock.setBackground(new Color(190, 240, 240));
+        btnUpdateDescription.setBackground(new Color(190, 240, 240));
+        btnUpdateImage.setBackground(new Color(190, 240, 240));
+        btnUpdateName.setBackground(new Color(190, 240, 240));
+        btnUpdateCategory.setBackground(new Color(190, 240, 240));
+        btnUpdatePrice.setBackground(new Color(190, 240, 240));
+        btnUpdateStock.setBackground(new Color(190, 240, 240));
+        btnUpdateDescription.setBackground(new Color(190, 240, 240));
+        btnUpdateImage.setBackground(new Color(190, 240, 240));
+
+        btnClose.setBackground(new Color(240, 170, 190));
     }
 
     private void buildUI() {

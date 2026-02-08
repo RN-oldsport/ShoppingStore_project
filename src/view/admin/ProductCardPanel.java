@@ -53,14 +53,11 @@ public class ProductCardPanel extends JPanel {
         lblCategory = new JLabel("Category: " + product.getCategory());
         lblDescription = new JLabel("Description: " + product.getDescription());
 
-//        lblTitle.setForeground(Color.BLUE);
-//        lblPrice.setForeground(Color.BLUE);
-//        lblStock.setForeground(Color.BLUE);
-//        lblCategory.setForeground(Color.BLUE);
-//        lblDescription.setForeground(Color.BLUE);
-
         btnModify = new JButton("Modify");
+        btnModify.setBackground(new Color(190, 240, 240));
+
         btnDelete = new JButton("Delete");
+        btnDelete.setBackground(new Color(240, 170, 190));
     }
 
     private void buildUI() {
@@ -82,7 +79,7 @@ public class ProductCardPanel extends JPanel {
         // Bottom button panel
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 50, 5));
-        buttonPanel.setBackground(new Color(20, 24, 240));
+        buttonPanel.setBackground(new Color(240, 240, 240));
 
         buttonPanel.add(btnModify);
         buttonPanel.add(btnDelete);

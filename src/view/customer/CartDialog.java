@@ -34,6 +34,7 @@ public class CartDialog extends JDialog {
         JButton btnClose = new JButton("Close");
         btnClose.addActionListener(e -> setVisible(false));
         JPanel bottomPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        btnClose.setBackground(new Color(240, 170, 190));
         bottomPanel.add(btnClose);
         add(bottomPanel, BorderLayout.SOUTH);
 

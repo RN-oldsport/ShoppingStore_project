@@ -53,6 +53,7 @@ public class CustomerProductCardPanel extends JPanel {
         lblDescription = new JLabel("Description: " + product.getDescription());
 
         btnAddToCart = new JButton("Add To Cart");
+        btnAddToCart.setBackground(new Color(190, 240, 240));
     }
 
     private void buildUI() {

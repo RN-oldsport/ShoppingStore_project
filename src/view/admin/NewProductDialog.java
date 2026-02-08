@@ -36,6 +36,7 @@ public class NewProductDialog extends JDialog {
         txtImage = new JTextField();
 
         btnAdd = new JButton("Add Item");
+        btnAdd.setBackground(new Color(190, 240, 240));
     }
 
     private void buildUI() {
