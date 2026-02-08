@@ -48,7 +48,7 @@ public class CustomerProductPanel extends JPanel {
         customer = (Customer) mainFrame.getCurrentUser();
         lblBalance = new JLabel("Balance : ");
 
-        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 25, 5));
+        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT, 25, 5));
         topPanel.add(btnViewCart);
         topPanel.add(btnPurchase);
         topPanel.add(lblBalance);
