@@ -6,20 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="README file added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ModifyProductDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ModifyProductDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/NewProductDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/NewProductDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ProductCardPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ProductCardPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ProductManagementPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/admin/ProductManagementPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CustomerProductPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CustomerProductPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/admin/ModifyProductDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ModifyProductDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/admin/NewProductDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/NewProductDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/admin/ProductCardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ProductCardPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/admin/ProductManagementPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/admin/ProductManagementPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/customer/CartDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CartDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/customer/CartItemPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CartItemPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/customer/CustomerProductCardPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CustomerProductCardPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/customer/CustomerProductPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CustomerProductPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/services/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/di/DependencyContainer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/OrderServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/OrderServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feature/ui-theme" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,7 +69,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/ui-theme",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/cyb/ShoppingStore_project/data/json_files",
     "node.js.detected.package.eslint": "true",

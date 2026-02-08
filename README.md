@@ -104,7 +104,7 @@ data/json_files/
 
 ## Main Classes and Responsibilities
 
-### model
+### Model Package
 - User : Base class for all users. Stores shared fields like id, username, passwordHash, and role.
 
 
@@ -127,3 +127,95 @@ data/json_files/
 
 
 - OrderItem : Represents an item inside an order (product id, quantity, price at purchase time).
+
+
+### Repository Package
+
+Repositories are responsible for reading and writing data from/to JSON files.
+
+- IUserRepository / JsonUserRepository
+Handles loading and saving users from Users.json.
+
+
+- IProductRepository / JsonProductRepository
+Handles loading and saving products from Products.json.
+
+
+- IOrderRepository / JsonOrderRepository
+Handles loading and saving orders from Orders.json.
+
+### Service Package
+
+Services contain the main business logic of the system.
+
+- AuthenticationService
+  Responsible for signup/login operations and password hashing validation.
+
+
+- CustomerServices
+  Manages customer-related operations such as updating balance and saving customer data.
+
+
+- ProductServices
+Manages product operations such as adding, editing, deleting products and updating stock.
+
+
+- CartServices
+Manages customer cart actions such as add/remove products, clear cart, and calculate total cost.
+
+
+- OrderServices
+Handles placing orders, validating stock and balance, updating product stock, saving orders, and updating customers.
+
+
+### Controller Package 
+
+Controllers are responsible for connecting the UI (Swing Views) to the business logic (Services).
+In this project, all event-handling logic (ActionListeners) is implemented inside controllers to keep the View layer clean.
+
+- AuthenticationController
+Handles login and signup actions.
+Connects the authentication UI to AuthenticationService and validates user credentials.
+
+
+- ProductController
+Handles admin product management operations such as creating, editing, and deleting products.
+Connects the admin panel UI to ProductServices.
+
+
+- CustomerController
+Controls the customer product panel.
+Handles actions such as viewing products, adding products to cart, and purchasing orders.
+
+
+- CartController
+Controls the cart dialog window.
+Handles cart operations such as increasing/decreasing quantity, removing items, and refreshing cart items.
+
+
+### View Package
+
+The view layer is responsible for the graphical user interface using Java Swing.
+
+- MainFrame
+The main application window. Manages switching between panels and stores the current logged-in user.
+
+  
+- LoginPanel / SignupPanel
+Panels responsible for authentication UI.
+
+  
+- ProductManagementPanel
+Admin panel for viewing and managing product list.
+
+
+- CustomerProductPanel
+Customer panel for viewing products and purchasing.
+
+
+- CartDialog
+Dialog window that shows customer cart items and allows cart operations.
+
+
+
+
