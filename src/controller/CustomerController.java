@@ -93,6 +93,9 @@ public class CustomerController {
 
             new CartController(cartDialog, cartService, customer);
 
+            double totalCost = cartService.calculateCartTotal(customer);
+            cartDialog.getLblTotalPrice().setText("Total Price: " + totalCost);
+
             cartDialog.setVisible(true);
         });
     }
