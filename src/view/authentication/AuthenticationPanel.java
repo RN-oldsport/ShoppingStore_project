@@ -21,49 +21,80 @@ public class AuthenticationPanel extends JPanel {
         gbc.insets = new Insets(10, 10, 10, 10);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
+        Font normalFont = new Font("Segoe UI", Font.PLAIN, 14);
+        Font buttonFont = new Font("Segoe UI", Font.BOLD, 14);
+        Font messageFont = new Font("Segoe UI", Font.PLAIN, 12);
+
         JLabel lblUsername = new JLabel("Username:");
-        lblUsername.setFont(lblUsername.getFont().deriveFont(Font.PLAIN, 14f));
+        lblUsername.setFont(normalFont);
         gbc.gridx = 0;
         gbc.gridy = 0;
         add(lblUsername, gbc);
 
         txtUsername = new JTextField(20);
-        txtUsername.setFont(txtUsername.getFont().deriveFont(Font.PLAIN, 14f));
+        txtUsername.setFont(normalFont);
+        txtUsername.setBorder(
+                BorderFactory.createCompoundBorder(
+                        BorderFactory.createLineBorder(new Color(200, 200, 200)),
+                        BorderFactory.createEmptyBorder(6, 10, 6, 10)
+                )
+        );
         gbc.gridx = 1;
         add(txtUsername, gbc);
 
         JLabel lblPassword = new JLabel("Password:");
-        lblPassword.setFont(lblPassword.getFont().deriveFont(Font.PLAIN, 14f));
+        lblPassword.setFont(normalFont);
         gbc.gridx = 0;
         gbc.gridy = 1;
         add(lblPassword, gbc);
 
         txtPassword = new JPasswordField(20);
-        txtPassword.setFont(txtPassword.getFont().deriveFont(Font.PLAIN, 14f));
+        txtPassword.setFont(normalFont);
+        txtPassword.setBorder(
+                BorderFactory.createCompoundBorder(
+                        BorderFactory.createLineBorder(new Color(200, 200, 200)),
+                        BorderFactory.createEmptyBorder(6, 10, 6, 10)
+                )
+        );
         gbc.gridx = 1;
         add(txtPassword, gbc);
 
+        // Signup Button
         btnSignup = new JButton("Signup");
-        btnSignup.setBackground(new Color(190, 240, 240));
-        btnSignup.setFont(btnSignup.getFont().deriveFont(Font.PLAIN, 14f));
+        styleButton(btnSignup, buttonFont, new Color(190, 240, 240));
         gbc.gridx = 0;
         gbc.gridy = 2;
         add(btnSignup, gbc);
 
+        // Login Button
         btnLogin = new JButton("Login");
-        btnLogin.setBackground(new Color(190, 240, 240));
-        btnLogin.setFont(btnLogin.getFont().deriveFont(Font.PLAIN, 14f));
+        styleButton(btnLogin, buttonFont, new Color(190, 240, 240));
         gbc.gridx = 1;
         add(btnLogin, gbc);
 
+        // Message Label
         lblMessage = new JLabel(" ");
         lblMessage.setForeground(Color.RED);
+        lblMessage.setFont(messageFont);
         gbc.gridx = 0;
         gbc.gridy = 3;
         gbc.gridwidth = 2;
+        gbc.anchor = GridBagConstraints.CENTER;
         add(lblMessage, gbc);
     }
 
+    private void styleButton(JButton btn, Font font, Color bg) {
+        btn.setFont(font);
+        btn.setForeground(Color.DARK_GRAY);
+        btn.setBackground(bg);
+        btn.setFocusPainted(false);
+        btn.setBorderPainted(false);
+        btn.setOpaque(true);
+        btn.setContentAreaFilled(true);
+        btn.setBorder(
+                BorderFactory.createEmptyBorder(10, 24, 10, 24)
+        );
+    }
 
     public JTextField getTxtUsername() {
         return txtUsername;
