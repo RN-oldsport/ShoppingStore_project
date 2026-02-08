@@ -34,6 +34,7 @@ public class AuthenticationController {
             if (user != null) {
                 authPanel.getLblMessage().setText("Login successful!");
                 mainFrame.setCurrentUser(user);
+                authPanel.getLblMessage().setText(" ");
             } else {
                 authPanel.getLblMessage().setText("Invalid credentials!");
             }

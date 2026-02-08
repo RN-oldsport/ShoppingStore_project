@@ -91,7 +91,7 @@ public class CustomerProductPanel extends JPanel {
         return lblBalance;
     }
 
-    public JButton getBtnlogout() {
+    public JButton getBtnLogout() {
         return btnlogout;
     }
 }

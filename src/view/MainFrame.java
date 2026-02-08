@@ -65,17 +65,19 @@ public class MainFrame extends JFrame {
         this.currentUser = user;
 
         // Switch panel based on role
-        if (user.getRole() == Role.ADMIN) {
-            showPanel(ADMIN_PANEL);
-        } else if (user.getRole() == Role.CUSTOMER) {
+        if (user == null) {
+            showPanel(AUTH_PANEL);
+        }
+        else if (user.getRole() == Role.CUSTOMER) {
             showPanel(CUSTOMER_PANEL);
 
             Customer currentCustomer = (Customer) currentUser;
             customerProductPanel.getLblBalance().setText("Balance: " + currentCustomer.getBalance());
         }
-        else {
-            showPanel(AUTH_PANEL);
+        else if  (user.getRole() == Role.ADMIN) {
+            showPanel(ADMIN_PANEL);
         }
+
     }
 
     public User getCurrentUser() {

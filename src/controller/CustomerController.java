@@ -40,6 +40,7 @@ public class CustomerController {
 
         connectViewCartButton();
         connectPurchaseButton();
+        connectLogoutButton();
 
         refreshCustomerPanel();
     }
@@ -132,6 +133,14 @@ public class CustomerController {
                 JOptionPane.showMessageDialog(mainFrame,
                         "Purchase failed: " + result.getMessage());
             }
+
+        });
+    }
+
+    public void connectLogoutButton() {
+        customerPanel.getBtnLogout().addActionListener(e -> {
+
+            mainFrame.setCurrentUser(null);
 
         });
     }
