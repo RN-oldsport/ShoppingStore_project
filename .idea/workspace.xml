@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Buttons are smaller now.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartItemPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartItemPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/customer/CartDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CartDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/customer/CartItemPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CartItemPanel.java" afterDir="false" />
-    </list>
+    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Buttons are smaller now." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/cart-item-ui",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/cyb/ShoppingStore_project/data/json_files",
     "node.js.detected.package.eslint": "true",

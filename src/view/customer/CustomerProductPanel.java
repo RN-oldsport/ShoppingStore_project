@@ -34,6 +34,7 @@ public class CustomerProductPanel extends JPanel {
         scrollPane = new JScrollPane(productsContainerPanel);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.getVerticalScrollBar().setUnitIncrement(16);
 
         btnViewCart = new JButton("View Cart");
         btnPurchase = new JButton("Purchase");

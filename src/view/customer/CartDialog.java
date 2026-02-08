@@ -32,6 +32,7 @@ public class CartDialog extends JDialog {
 
         JScrollPane scrollPane = new JScrollPane(itemsContainer);
         scrollPane.setPreferredSize(new Dimension(600, 400));
+        scrollPane.getVerticalScrollBar().setUnitIncrement(16);
         add(scrollPane, BorderLayout.CENTER);
 
         JButton btnClose = new JButton("Close");
