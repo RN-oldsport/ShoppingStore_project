@@ -75,4 +75,8 @@ public class CustomerProductPanel extends JPanel {
     public JButton getBtnPurchase() {
         return btnPurchase;
     }
+
+    public JLabel getLblBalance() {
+        return lblBalance;
+    }
 }
