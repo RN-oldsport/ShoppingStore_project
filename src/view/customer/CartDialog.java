@@ -16,6 +16,7 @@ public class CartDialog extends JDialog {
 
     private JPanel itemsContainer;
     private List<CartItemPanel> itemPanels;
+    private JLabel lblTotalPrice;
 
     public CartDialog(JFrame parent, CartServices cartService, Customer customer) {
         super(parent, "Your Cart", true);
@@ -37,7 +38,7 @@ public class CartDialog extends JDialog {
         add(bottomPanel, BorderLayout.SOUTH);
 
         JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        JLabel lblTotalPrice = new JLabel("Total Price: ");
+        lblTotalPrice = new JLabel("Total Price: 0");
         topPanel.add(lblTotalPrice);
         add(topPanel, BorderLayout.NORTH);
 
@@ -67,5 +68,9 @@ public class CartDialog extends JDialog {
     // Getter for CartItemPanels (for controller)
     public List<CartItemPanel> getItemPanels() {
         return itemPanels;
+    }
+
+    public  JLabel getLblTotalPrice() {
+        return lblTotalPrice;
     }
 }
