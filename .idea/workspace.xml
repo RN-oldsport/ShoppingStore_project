@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="README updated.">
+    <list default="true" id="5e02147b-9469-4fb7-ac4b-7f366c86c95d" name="Changes" comment="Buttons are smaller now.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartItemPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingStore_project/view/customer/CartItemPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/customer/CartDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CartDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/customer/CartItemPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/customer/CartItemPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -467,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770548376121</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Buttons are smaller now.">
+      <option name="closed" value="true" />
+      <created>1770548924147</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1770548924147</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Users Json file created" />
     <MESSAGE value="Product created" />
     <MESSAGE value="Order created" />
     <MESSAGE value="Product json file created" />
@@ -510,7 +521,8 @@
     <MESSAGE value="Messages updated." />
     <MESSAGE value="README updated." />
     <MESSAGE value="Sample products created." />
-    <option name="LAST_COMMIT_MESSAGE" value="Sample products created." />
+    <MESSAGE value="Buttons are smaller now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Buttons are smaller now." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

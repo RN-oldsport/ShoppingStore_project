@@ -89,7 +89,7 @@ public class CustomerController {
 
             Customer customer = (Customer) mainFrame.getCurrentUser();
 
-            CartDialog cartDialog = new CartDialog(mainFrame, cartService, customer);
+            CartDialog cartDialog = new CartDialog(mainFrame, cartService, customer, productService);
 
             new CartController(cartDialog, cartService, customer);
 
