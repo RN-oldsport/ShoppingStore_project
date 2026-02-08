@@ -25,7 +25,7 @@ public class ProductController {
 
 
         connectNewProductButton();
-
+        connectLogoutButton();
 
         loadProductsToPanel();
     }
@@ -160,6 +160,15 @@ public class ProductController {
             });
 
             dialog.setVisible(true);
+        });
+    }
+
+
+    public void connectLogoutButton() {
+        JButton btnLogout = adminPanel.getBtnLogout();
+        btnLogout.addActionListener(e -> {
+
+            mainFrame.setCurrentUser(null);
         });
     }
 }
