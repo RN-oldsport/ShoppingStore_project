@@ -1,17 +1,19 @@
 
-![](data\images\Screenshot 2026-02-09 145322.png)
+![](data/images/Screenshot_2026-02-09_145322.png)
 
-![](data\images\Screenshot 2026-02-09 145534.png)
+![](data/images/Screenshot_2026-02-09_145534.png)
 
-![](data\images\Screenshot 2026-02-09 145712.png)
+![](data/images/Screenshot_2026-02-09_145712.png)
 
-![](data\images\Screenshot 2026-02-09 145728.png)
+![](data/images/Screenshot_2026-02-09_145728.png)
 
-![](data\images\Screenshot 2026-02-09 145603.png)
+![](data/images/Screenshot_2026-02-09_145603.png)
 
-![](data\images\Screenshot 2026-02-09 145436.png)
+![](data/images/Screenshot_2026-02-09_145436.png)
 
-![](data\images\Screenshot 2026-02-09 145758.png)
+![](data/images/Screenshot_2026-02-09_145758.png)
+
+---
 
 # Shopping Store Project (Java Swing)
 
@@ -149,15 +151,15 @@ data/json_files/
 Repositories are responsible for reading and writing data from/to JSON files.
 
 - IUserRepository / JsonUserRepository
-Handles loading and saving users from Users.json.
+  Handles loading and saving users from Users.json.
 
 
 - IProductRepository / JsonProductRepository
-Handles loading and saving products from Products.json.
+  Handles loading and saving products from Products.json.
 
 
 - IOrderRepository / JsonOrderRepository
-Handles loading and saving orders from Orders.json.
+  Handles loading and saving orders from Orders.json.
 
 ### Service Package
 
@@ -172,40 +174,40 @@ Services contain the main business logic of the system.
 
 
 - ProductServices
-Manages product operations such as adding, editing, deleting products and updating stock.
+  Manages product operations such as adding, editing, deleting products and updating stock.
 
 
 - CartServices
-Manages customer cart actions such as add/remove products, clear cart, and calculate total cost.
+  Manages customer cart actions such as add/remove products, clear cart, and calculate total cost.
 
 
 - OrderServices
-Handles placing orders, validating stock and balance, updating product stock, saving orders, and updating customers.
+  Handles placing orders, validating stock and balance, updating product stock, saving orders, and updating customers.
 
 
-### Controller Package 
+### Controller Package
 
 Controllers are responsible for connecting the UI (Swing Views) to the business logic (Services).
 In this project, all event-handling logic (ActionListeners) is implemented inside controllers to keep the View layer clean.
 
 - AuthenticationController
-Handles login and signup actions.
-Connects the authentication UI to AuthenticationService and validates user credentials.
+  Handles login and signup actions.
+  Connects the authentication UI to AuthenticationService and validates user credentials.
 
 
 - ProductController
-Handles admin product management operations such as creating, editing, and deleting products.
-Connects the admin panel UI to ProductServices.
+  Handles admin product management operations such as creating, editing, and deleting products.
+  Connects the admin panel UI to ProductServices.
 
 
 - CustomerController
-Controls the customer product panel.
-Handles actions such as viewing products, adding products to cart, and purchasing orders.
+  Controls the customer product panel.
+  Handles actions such as viewing products, adding products to cart, and purchasing orders.
 
 
 - CartController
-Controls the cart dialog window.
-Handles cart operations such as increasing/decreasing quantity, removing items, and refreshing cart items.
+  Controls the cart dialog window.
+  Handles cart operations such as increasing/decreasing quantity, removing items, and refreshing cart items.
 
 
 ### View Package
@@ -213,23 +215,23 @@ Handles cart operations such as increasing/decreasing quantity, removing items, 
 The view layer is responsible for the graphical user interface using Java Swing.
 
 - MainFrame
-The main application window. Manages switching between panels and stores the current logged-in user.
+  The main application window. Manages switching between panels and stores the current logged-in user.
 
-  
+
 - LoginPanel / SignupPanel
-Panels responsible for authentication UI.
+  Panels responsible for authentication UI.
 
-  
+
 - ProductManagementPanel
-Admin panel for viewing and managing product list.
+  Admin panel for viewing and managing product list.
 
 
 - CustomerProductPanel
-Customer panel for viewing products and purchasing.
+  Customer panel for viewing products and purchasing.
 
 
 - CartDialog
-Dialog window that shows customer cart items and allows cart operations.
+  Dialog window that shows customer cart items and allows cart operations.
 
 
 
