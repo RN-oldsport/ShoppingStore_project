@@ -15,6 +15,8 @@
 
 ---
 
+---
+
 # Shopping Store Project (Java Swing)
 
 This is a simple shopping store application developed using Java Swing.
