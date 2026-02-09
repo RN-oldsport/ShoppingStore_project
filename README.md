@@ -13,6 +13,8 @@
 
 ![](data\images\Screenshot 2026-02-09 145758.png)
 
+---
+
 # Shopping Store Project (Java Swing)
 
 This is a simple shopping store application developed using Java Swing.
